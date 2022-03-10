@@ -9,4 +9,4 @@
   - overview
     - Spark Streaming receives live input data streams, it ** collects data for some time, builds RDD **, divides the data into micro-batches, which are then processed by the Spark engine to generate the final stream of results in micro-batches. Following data flow diagram explains the working of Spark streaming. 
     
-    <img src="https://github.com/popolee0513/Data-engineering-Note/blob/main/PIC/pyspark-streaming-flow.png" width="500" height="300"/>
+    <img src="https://github.com/popolee0513/Data-engineering-Note/blob/main/PIC/pyspark-streaming-flow.png" width="600" height="150"/>
