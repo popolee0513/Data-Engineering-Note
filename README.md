@@ -10,7 +10,9 @@
      - 可以把Kinesis Data Stream裡的shards想成港口，港口越多吞吐量越大，而Firehose delivery stream則是把貨物(資料)運送到目的地的船隻
 - pyspark
   - overview
-    - Spark包含1個driver和若干個exexutor（在各個節點上），Driver負責任務調度、監控任務運行狀態等工作；其他機器均為Executor機，只負責執行Driver分發給他的Task任務，以及上報任務執行狀態。
+    - Spark包含1個driver和若干個exexutor（在各個節點上）
+    - Driver會把計算任務分成一系列小的task，然後送到executor執行。executor之間可以通信，在每個executor完成自己的task以後，所有的信息會被傳回。
+    
     - 在Spark，所有的處理和計算任務都會被組織成一系列Resilient Distributed Dataset(彈性分布式數據集，簡稱RDD)上的transformations(轉換) 和 actions(動作)。
     - what is RDD
       - In Spark, datasets are represented as a list of entries, where the list is broken up into many different partitions that are each stored on a different machine. Each partition holds a unique subset of the entries in the list. Spark calls datasets that it stores "Resilient Distributed Datasets" (RDDs).
