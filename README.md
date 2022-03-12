@@ -37,8 +37,8 @@
        b = a.filter(lambda x: len(x)>0 and x.split("\t").count("111"))
        c = b.collect()
        ``` 
-       (1) variable a will be saved as a RDD variable containing the expected txt file content
-         - ❗❗❗ Not really. The line just describes what will happen after you execute an action, i.e. the RDD variable does not contain the expected txt file content.</br>
+       (1) variable a will be saved as a RDD variable containing the expected txt file content</br>
+       ❗❗❗ Not really. The line just describes what will happen after you execute an action, i.e. the RDD variable does not contain the expected txt file content.</br>
        (2) The driver node breaks up the work into tasks and each task contains information about the split of the data it will operate on. Now these Tasks are assigned to worker nodes.</br>
        (3) when collection action (i.e collect() in our case) is invoked, the results will be returned to the master from different nodes, and saved as a local variable c.
 - pyspark streaming 
