@@ -8,6 +8,7 @@
    - Amazon Kinesis
      - [利用 Kinesis 處理串流資料並建立資料湖](https://leemeng.tw/use-kinesis-streams-and-firehose-to-build-a-data-lake.html)
      - 可以把Kinesis Data Stream裡的shards想成港口，港口越多吞吐量越大，而Firehose delivery stream則是把貨物(資料)運送到目的地的船隻
+    - [Apache Spark Discretized Streams (DStreams) with Pyspark](https://medium.com/analytics-vidhya/apache-spark-discretized-streams-dstreams-with-pyspark-4882026b4fa4)
 - pyspark
   - overview
     - Spark包含1個driver和若干個exexutor（在各個節點上）
