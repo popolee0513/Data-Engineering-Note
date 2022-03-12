@@ -32,11 +32,11 @@
        - action(行動類操作)：將操作結果回傳給Driver,或是對RDD元素執行一些操作，但不會產生新的RDD
        - ❗❗❗ RDD透過運算可以得出新的RDD，但Spark會延遲這個「轉換」動作的發生時間點。它並不會馬上執行，而是等到執行了Action之後，才會基於所有的RDD關係來執行轉換。ex: .collect()
      - code example
-       '''python
+       ``` python
        a = sc.textFile(filename) 
        b = a.filter(lambda x: len(x)>0 and x.split("\t").count("111"))
        c = b.collect()
-       '''
+       ``` 
 - pyspark streaming 
   - overview
     -  Spark Streaming first takes live input data streams and then divides them into batches. After this, the Spark engine processes those streams and generates the final stream results in batches. 
