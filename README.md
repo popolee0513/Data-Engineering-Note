@@ -49,7 +49,7 @@
      - group by key v.s. reduce by key
        - reduceByKey(fun):將具有相同key的鍵值對之所有值做合併(Merge)計算
     
-         <img src="https://github.com/popolee0513/Data-engineering-Note/blob/main/PIC/reduce_by_key.png" width="700" height="400"/>
+         <img src="https://github.com/popolee0513/Data-engineering-Note/blob/main/PIC/reduce_by_key.png" width="500" height="400"/>
        
      - Broadcast Variables
        - Keep read-only variable cached on workers(Ship to each worker only once instead of with each task)
