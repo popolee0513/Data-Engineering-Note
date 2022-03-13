@@ -64,20 +64,20 @@
      
        ``` python
        X.join(Y)
-       >>>	x	=	sc.parallelize([("a",1),("b",4)])	
-       >>>	y	=	sc.parallelize([("a",2),("a",3)])	
-       >>>	sorted(x.join(y).collect())	
+       >>>x=sc.parallelize([("a",1),("b",4)])	
+       >>>y=sc.parallelize([("a",2),("a",3)])	
+       >>>sorted(x.join(y).collect())	
        Value:	[('a',(1,2)),	('a',(1,3))]
        
        X.leftOuterJoin(Y)
-       >>>	x	=	sc.parallelize([("a",1),("b",4)])	
-       >>>	y	=	sc.parallelize([("a",2)])	
-       >>>	sorted(x.leftOuterJoin(y).collect())	
+       >>>x=sc.parallelize([("a",1),("b",4)])	
+       >>>y=sc.parallelize([("a",2)])	
+       >>>sorted(x.leftOuterJoin(y).collect())	
        Value:	[('a',(1,2)),('b',(4,None))]
        
        X.fullOuterJoin(Y)
-       >>>	x	=	sc.parallelize([("a",1),("b",4)])	
-       >>>	y	=	sc.parallelize([("a",2),("c",8)])	
+       >>>x=sc.parallelize([("a",1),("b",4)])	
+       >>>y=sc.parallelize([("a",2),("c",8)])	
        >>>	sorted(x.fullOuterJoin(y).collect())	
        Value:	[('a',(1,2)),('b',(4,None)),('c',(None,8))]
        ``` 
