@@ -44,6 +44,7 @@
        (3) when collection action (i.e collect() in our case) is invoked, the results will be returned to the master from different nodes, and saved as a local variable c.
   - pyspark 用法筆記
      - 常見指令
+     
        <img src="https://github.com/popolee0513/Data-engineering-Note/blob/main/PIC/%E5%B8%B8%E8%A6%8Bspark%20%E6%8C%87%E4%BB%A4.png" width="800" height="550"/>
        
      - Broadcast Variables
