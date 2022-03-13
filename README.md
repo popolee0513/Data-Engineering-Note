@@ -42,6 +42,12 @@
        ❗❗❗ Not really. The line just **describes** what will happen **after** you execute an action, i.e. the RDD variable does **not** contain the expected txt file content.</br>
        (2) The driver node breaks up the work into tasks and each task contains information about the split of the data it will operate on. Now these Tasks are assigned to worker nodes.</br>
        (3) when collection action (i.e collect() in our case) is invoked, the results will be returned to the master from different nodes, and saved as a local variable c.
+  - pyspark 用法筆記
+     - Broadcast Variables
+       - Keep read-only variable cached on workers(Ship to each worker only once instead of with each task)
+       - Like sending a large, read-only lookup table to all the nodes
+       
+       <img src="https://github.com/popolee0513/Data-engineering-Note/blob/main/PIC/Pyspark%20broadcast.png" width="600" height="400"/>
 - pyspark streaming 
   - overview
     -  Spark Streaming first takes live input data streams and then divides them into batches. After this, the Spark engine processes those streams and generates the final stream results in batches. 
