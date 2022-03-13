@@ -63,21 +63,23 @@
      - pyspark 的join
      
        ``` python
-       >>> pairRDD1.collect()
-       [('cat', 2), ('cat', 5), ('book', 4), ('cat', 12)]
-       >>> pairRDD2.collect()
-       [('cat', 2), ('cup', 5), ('mouse', 4), ('cat', 12)]
-       Join内连接结果：
-       >>> pairRDD1.join(pairRDD2).collect()
-       [('cat', (2, 2)), ('cat', (2, 12)), ('cat', (5, 2)), ('cat', (5, 12)), ('cat', (12, 2)), ('cat', (12, 12))]
-       leftOuterJoin结果： 
-       >>> pairRDD1.leftOuterJoin(pairRDD2).collect()
-       [('book', (4, None)), ('cat', (2, 2)), ('cat', (2, 12)), ('cat', (5, 2)), ('cat', (5, 12)), ('cat', (12, 2)), ('cat', (12, 12))]
-       rightOuterJoin结果： 
-       >>> pairRDD1.rightOuterJoin(pairRDD2).collect()
-       [('cup', (None, 5)), ('mouse', (None, 4)), ('cat', (2, 2)), ('cat', (2, 12)), ('cat', (5, 2)), ('cat', (5, 12)), ('cat', (12, 2)), ('cat', (12, 12))]
-       fullOuterJoin结果： 
-       [('book', (4, None)), ('cup', (None, 5)), ('mouse', (None, 4)), ('cat', (2, 2)), ('cat', (2, 12)), ('cat', (5, 2)), ('cat', (5, 12)), ('cat', (12, 2)), ('cat',(12,12))]
+       X.join(Y)
+       >>>	x	=	sc.parallelize([("a",	1),	("b",	4)])	
+       >>>	y	=	sc.parallelize([("a",	2),	("a",	3)])	
+       >>>	sorted(x.join(y).collect())	
+       Value:	[('a',	(1,	2)),	('a',	(1,	3))]
+       
+       X.leftOuterJoin(Y)
+       >>>	x	=	sc.parallelize([("a",	1),	("b",	4)])	
+       >>>	y	=	sc.parallelize([("a",	2)])	
+       >>>	sorted(x.leftOuterJoin(y).collect())	
+       Value:	[('a',	(1,	2)),	('b',	(4,	None))]
+       
+       X.fullOuterJoin(Y)
+       >>>	x	=	sc.parallelize([("a",	1),	("b",	4)])	
+       >>>	y	=	sc.parallelize([("a",	2),	("c",	8)])	
+       >>>	sorted(x.fullOuterJoin(y).collect())	
+       Value:	[('a',	(1,	2)),	('b',	(4,	None))	,	('c',	(None,	8))]
        ``` 
        
 - pyspark streaming 
