@@ -47,7 +47,7 @@
        - Keep read-only variable cached on workers(Ship to each worker only once instead of with each task)
        - Like sending a large, read-only lookup table to all the nodes
        
-       <img src="https://github.com/popolee0513/Data-engineering-Note/blob/main/PIC/Pyspark%20broadcast.png" width="850" height="400"/>
+       <img src="https://github.com/popolee0513/Data-engineering-Note/blob/main/PIC/Pyspark%20broadcast.png" width="850" height="500"/>
 - pyspark streaming 
   - overview
     -  Spark Streaming first takes live input data streams and then divides them into batches. After this, the Spark engine processes those streams and generates the final stream results in batches. 
