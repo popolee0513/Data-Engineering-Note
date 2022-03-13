@@ -43,6 +43,9 @@
        (2) The driver node breaks up the work into tasks and each task contains information about the split of the data it will operate on. Now these Tasks are assigned to worker nodes.</br>
        (3) when collection action (i.e collect() in our case) is invoked, the results will be returned to the master from different nodes, and saved as a local variable c.
   - pyspark 用法筆記
+     - 常見指令
+       <img src="https://github.com/popolee0513/Data-engineering-Note/blob/main/PIC/%E5%B8%B8%E8%A6%8Bspark%20%E6%8C%87%E4%BB%A4.png" width="80" height="500"/>
+       
      - Broadcast Variables
        - Keep read-only variable cached on workers(Ship to each worker only once instead of with each task)
        - Like sending a large, read-only lookup table to all the nodes
