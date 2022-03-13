@@ -52,7 +52,7 @@
          <img src="https://github.com/popolee0513/Data-engineering-Note/blob/main/PIC/reduce_by_key.png" width="450" height="400"/>
        - groupByKey():以key進行分組，具有相同key的元素之values會形成一個value list (數值串列，或稱Iterable)
        
-         <img src="https://github.com/popolee0513/Data-engineering-Note/blob/main/PIC/groupby_key.png" width="450" height="400"/>      
+         <img src="https://github.com/popolee0513/Data-engineering-Note/blob/main/PIC/groupby_key.png" width="400" height="400"/>      
      - Broadcast Variables
        - Keep read-only variable cached on workers(Ship to each worker only once instead of with each task)
        - Like sending a large, read-only lookup table to all the nodes
