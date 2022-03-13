@@ -77,7 +77,7 @@
        >>> pairRDD1.rightOuterJoin(pairRDD2).collect()
        [('cup', (None, 5)), ('mouse', (None, 4)), ('cat', (2, 2)), ('cat', (2, 12)), ('cat', (5, 2)), ('cat', (5, 12)), ('cat', (12, 2)), ('cat', (12, 12))]
        fullOuterJoin结果： 
-       [('book', (4, None)), ('cup', (None, 5)), ('mouse', (None, 4)), ('cat', (2, 2)), ('cat', (2, 12)), ('cat', (5, 2)), ('cat', (5, 12)), ('cat', (12, 2)), ('cat', (12,          12))]
+       [('book', (4, None)), ('cup', (None, 5)), ('mouse', (None, 4)), ('cat', (2, 2)), ('cat', (2, 12)), ('cat', (5, 2)), ('cat', (5, 12)), ('cat', (12, 2)), ('cat',(12,12))]
        ``` 
        
 - pyspark streaming 
