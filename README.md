@@ -60,6 +60,26 @@
        - Like sending a large, read-only lookup table to all the nodes
        
        <img src="https://github.com/popolee0513/Data-engineering-Note/blob/main/PIC/Pyspark%20broadcast.png" width="850" height="500"/>
+     - pyspark 的join
+     
+       ``` python
+       >>> pairRDD1.collect()
+       [('cat', 2), ('cat', 5), ('book', 4), ('cat', 12)]
+       >>> pairRDD2.collect()
+       [('cat', 2), ('cup', 5), ('mouse', 4), ('cat', 12)]
+       Join内连接结果：
+       >>> pairRDD1.join(pairRDD2).collect()
+       [('cat', (2, 2)), ('cat', (2, 12)), ('cat', (5, 2)), ('cat', (5, 12)), ('cat', (12, 2)), ('cat', (12, 12))]
+       leftOuterJoin结果： 
+       >>> pairRDD1.leftOuterJoin(pairRDD2).collect()
+       [('book', (4, None)), ('cat', (2, 2)), ('cat', (2, 12)), ('cat', (5, 2)), ('cat', (5, 12)), ('cat', (12, 2)), ('cat', (12, 12))]
+       rightOuterJoin结果： 
+       >>> pairRDD1.rightOuterJoin(pairRDD2).collect()
+       [('cup', (None, 5)), ('mouse', (None, 4)), ('cat', (2, 2)), ('cat', (2, 12)), ('cat', (5, 2)), ('cat', (5, 12)), ('cat', (12, 2)), ('cat', (12, 12))]
+       fullOuterJoin结果： 
+       [('book', (4, None)), ('cup', (None, 5)), ('mouse', (None, 4)), ('cat', (2, 2)), ('cat', (2, 12)), ('cat', (5, 2)), ('cat', (5, 12)), ('cat', (12, 2)), ('cat', (12,          12))]
+       ``` 
+       
 - pyspark streaming 
   - overview
     -  Spark Streaming first takes live input data streams and then divides them into batches. After this, the Spark engine processes those streams and generates the final stream results in batches. 
