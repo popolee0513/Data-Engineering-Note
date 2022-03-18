@@ -64,7 +64,7 @@
        [[Spark內核] 第42課：Spark Broadcast內幕解密：Broadcast運行機制徹底解密、Broadcast源碼解析、Broadcast最佳實踐 ](https://www.cnblogs.com/jcchoiling/p/6538780.html)
      - pyspark 的 Accumulators
        - Accumulators are variables that are used for aggregating information across the executors，for example, the following code can count empty lines during the workers rununing the action
-      ``` python
+         ``` python
          file = sc.textFile(inputFile)	
          # Create Accumulator[Int] initialized	to 0		
          blankLines = sc.accumulator(0)		
@@ -80,6 +80,26 @@
        - Only driver can read an accumulator’s value, not tasks
        - Tasks see accumulators as write-only variables
        - accumulators other example
+          ``` python
+	  rdd = sc.parallelize([1,2,3]) 
+	  from pyspark.accumulators import AccumulatorParam 
+          class VectorAccumulatorParam(AccumulatorParam): 
+             def zero(self, value): 
+                return [0.0] * len(value) 
+            def addInPlace(self, val1, val2): 
+                 for i in range(len(val1)): 
+                      val1[i] += val2[i] 
+                 return val1 
+           va = sc.accumulator([1.0, 2.0, 3.0], VectorAccumulatorParam()) 
+           va.value 
+           >>> [1.0, 2.0, 3.0] 
+           def g(x): 
+             global va 
+             va += [x] * 3 
+           rdd.foreach(g) 
+           va.value 
+           >>> [7.0, 8.0, 9.0] 
+           ``` 
          
         
      - pyspark 的join
