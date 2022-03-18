@@ -81,26 +81,7 @@
        - Tasks see accumulators as write-only variables
        - accumulators other example
          
-          ``` python
-	  rdd = sc.parallelize([1,2,3]) 
-	  from pyspark.accumulators import AccumulatorParam 
-          class VectorAccumulatorParam(AccumulatorParam): 
-             def zero(self, value): 
-                return [0.0] * len(value) 
-            def addInPlace(self, val1, val2): 
-                 for i in range(len(val1)): 
-                      val1[i] += val2[i] 
-                 return val1 
-           va = sc.accumulator([1.0, 2.0, 3.0], VectorAccumulatorParam()) 
-           va.value 
-           >>> [1.0, 2.0, 3.0] 
-           def g(x): 
-             global va 
-             va += [x] * 3 
-           rdd.foreach(g) 
-           va.value 
-           >>> [7.0, 8.0, 9.0] 
-      ``` 
+        
      - pyspark 的join
      
        ``` python
