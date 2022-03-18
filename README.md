@@ -77,9 +77,9 @@
          callSigns = file.flatMap(extractCallSigns)		
          print	("Blank	lines:	%d" % blankLines.value)	
          ```
-        - Only driver can read an accumulator’s value, not tasks
-        - Tasks see accumulators as write-only variables
-        - accumulators other example
+       - Only driver can read an accumulator’s value, not tasks
+       - Tasks see accumulators as write-only variables
+       - accumulators other example
          
           ``` python
 	  rdd = sc.parallelize([1,2,3]) 
