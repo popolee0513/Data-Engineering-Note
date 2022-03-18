@@ -68,8 +68,8 @@
          file = sc.textFile(inputFile)	
          # Create Accumulator[Int] initialized	to 0		
          blankLines = sc.accumulator(0)		
-         def extractCallSigns(line):	
-	     global blankLines # Make the global variable accessible	
+         def  extractCallSigns(line):	
+	     global blankLines  # Make the global variable accessible	
 	     if (line ==""):		
 		 blankLines +=1		
 	     return line.split(" ")	
