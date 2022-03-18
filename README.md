@@ -64,11 +64,17 @@
        [[Spark內核] 第42課：Spark Broadcast內幕解密：Broadcast運行機制徹底解密、Broadcast源碼解析、Broadcast最佳實踐 ](https://www.cnblogs.com/jcchoiling/p/6538780.html)
      - pyspark 的 Accumulators
        - Accumulators are variables that are used for aggregating information across the executors，for example, the following code can count empty lines during the workers rununing the action
-       
-         ``` python
-	 file = sc.textFile(inputFile)
-	 blankLines = sc.accumulator(0)	
-         ```
+       ``` python
+       file = sc.textFile(inputFile)
+       blankLines = sc.accumulator(0)
+       def extractCallSigns(line):
+           global blankLines #	Make the global	variable accessible
+	   if (line ==""):
+	       blankLines+=1
+	   return line.split("	")	
+       callSigns = file.flatMap(extractCallSigns)
+       print("Blank lines: %d"	% blankLines.value)	
+       ``` 
        - Worker tasks on a Spark cluster can add values to an Accumulator with the += operator, but only the driver program is allowed to access its value, using value.
      - rdd foreach
        - [difference between rdd foreach and rdd map](https://stackoverflow.com/questions/41388597/difference-between-rdd-foreach-and-rdd-map)
