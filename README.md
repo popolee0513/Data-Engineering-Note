@@ -69,7 +69,7 @@
        blankLines = sc.accumulator(0)
        def extractCallSigns(line):
            global blankLines #	Make the global	variable accessible
-	   if (line ==""):
+  if (line ==""):
 	       blankLines+=1
 	   return line.split("	")	
        callSigns = file.flatMap(extractCallSigns)
