@@ -65,16 +65,8 @@
      - pyspark 的 Accumulators
        - Accumulators are variables that are used for aggregating information across the executors，for example, the following code can count empty lines during the workers rununing the action
         ``` python
-        file = sc.textFile(inputFile)	
-        # Create Accumulator[Int] initialized	to 0		
-        blankLines = sc.accumulator(0)
-	def extractCallSigns(line):	
-	    global  blankLines  # Make the global variable accessible	
-	    if ( line ==""):		
-		blankLines +=1
-	    return line.split(" ")
-        callSigns = file.flatMap(extractCallSigns)		
-        print("Blank	lines:	%d" % blankLines.value) 
+        file = sc.textFile(inputFile)
+	blankLines = sc.accumulator(0)
         ```
        - Worker tasks on a Spark cluster can add values to an Accumulator with the += operator, but only the driver program is allowed to access its value, using value.
      - rdd foreach
