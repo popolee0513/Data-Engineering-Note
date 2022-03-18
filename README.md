@@ -63,21 +63,43 @@
        
        [[Spark內核] 第42課：Spark Broadcast內幕解密：Broadcast運行機制徹底解密、Broadcast源碼解析、Broadcast最佳實踐 ](https://www.cnblogs.com/jcchoiling/p/6538780.html)
      - pyspark 的 Accumulators
-       - Accumulators are variables that are used for aggregating information across the executors
+       - Accumulators are variables that are used for aggregating information across the executors，for example, the following code can count empty lines during the workers rununing the action
          ``` python
-         file	=	sc.textFile(inputFile)	
-         #	Create	Accumulator[Int]	initialized	to	0		
+         file = sc.textFile(inputFile)	
+         # Create Accumulator[Int] initialized	to 0		
          blankLines	=	sc.accumulator(0)		
          def extractCallSigns(line):	
-				     global blankLines #	Make	the	global	variable	accessible	
-				     if (line	==	""):		
-								blankLines	+=	1		
-				     return line.split("	")	
+	     global blankLines # Make the global variable accessible	
+	     if (line ==""):		
+		 blankLines +=1		
+	     return line.split("	")	
 		
-         callSigns	=	file.flatMap(extractCallSigns)		
-         print	("Blank	lines:	%d"	%	blankLines.value)	
+         callSigns = file.flatMap(extractCallSigns)		
+         print	("Blank	lines:	%d" % blankLines.value)	
          ```
-         
+        - Only driver can read an accumulator’s value, not tasks
+        - Tasks see accumulators as write-only variables
+        - accumulators other example
+          ``` python
+	  rdd = sc.parallelize([1,2,3]) 
+	  from pyspark.accumulators import AccumulatorParam 
+          class VectorAccumulatorParam(AccumulatorParam): 
+ 47          def zero(self, value): 
+ 48              return [0.0] * len(value) 
+ 49          def addInPlace(self, val1, val2): 
+ 50              for i in range(len(val1)): 
+ 51                   val1[i] += val2[i] 
+ 52              return val1 
+ 53        va = sc.accumulator([1.0, 2.0, 3.0], VectorAccumulatorParam()) 
+ 54        va.value 
+ 55        >>> [1.0, 2.0, 3.0] 
+ 56        def g(x): 
+ 57          global va 
+ 58          va += [x] * 3 
+ 59        rdd.foreach(g) 
+ 60        va.value 
+ 61        >>> [7.0, 8.0, 9.0] 
+	  ``` 
      - pyspark 的join
      
        ``` python
