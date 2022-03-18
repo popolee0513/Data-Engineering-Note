@@ -78,7 +78,8 @@
          print	("Blank	lines:	%d" % blankLines.value)	
          ```
        - Worker tasks on a Spark cluster can add values to an Accumulator with the += operator, but only the driver program is allowed to access its value, using value.
-   
+     - rdd foreach
+       - [difference between rdd foreach and rdd map](https://stackoverflow.com/questions/41388597/difference-between-rdd-foreach-and-rdd-map)
      - pyspark 的join
      
        ``` python
