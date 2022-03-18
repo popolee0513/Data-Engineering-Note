@@ -67,12 +67,12 @@
          ``` python
          file = sc.textFile(inputFile)	
          # Create Accumulator[Int] initialized	to 0		
-         blankLines	=	sc.accumulator(0)		
+         blankLines = sc.accumulator(0)		
          def extractCallSigns(line):	
 	     global blankLines # Make the global variable accessible	
 	     if (line ==""):		
 		 blankLines +=1		
-	     return line.split("	")	
+	     return line.split(" ")	
 		
          callSigns = file.flatMap(extractCallSigns)		
          print	("Blank	lines:	%d" % blankLines.value)	
@@ -99,7 +99,7 @@
  59        rdd.foreach(g) 
  60        va.value 
  61        >>> [7.0, 8.0, 9.0] 
-	  ``` 
+	   ``` 
      - pyspark 的join
      
        ``` python
