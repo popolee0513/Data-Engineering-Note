@@ -80,6 +80,7 @@
         - Only driver can read an accumulator’s value, not tasks
         - Tasks see accumulators as write-only variables
         - accumulators other example
+         
           ``` python
 	  rdd = sc.parallelize([1,2,3]) 
 	  from pyspark.accumulators import AccumulatorParam 
