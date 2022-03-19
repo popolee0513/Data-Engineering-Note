@@ -14,7 +14,7 @@
      - [4 万字！PySpark 入门级学习教程来了！](https://zhuanlan.zhihu.com/p/436113747)
 - pyspark
   - overview
-    - Spark包含1個driver和若干個exexutor（在各個節點上）
+    - Spark包含1個driver和若干個exexutor（在各個節點上）(master-slave architecture, the master is the driver, and slaves are the executors.)
     - Driver會把計算任務分成一系列小的task，然後送到executor執行。executor之間可以通信，在每個executor完成自己的task以後，所有的信息會被傳回。
      
      <img src="https://github.com/popolee0513/Data-engineering-Note/blob/main/PIC/spark_structure.png" width="500" height="300"/>
