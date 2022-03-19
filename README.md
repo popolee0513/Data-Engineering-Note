@@ -35,6 +35,8 @@
        - transformation: 操作一個或多個RDD，並產生出新的RDD
        - action(行動類操作)：將操作結果回傳給Driver,或是對RDD元素執行一些操作，但不會產生新的RDD
        - ❗❗❗ RDD透過運算可以得出新的RDD，但Spark會延遲這個「轉換」動作的發生時間點。它並不會馬上執行，而是等到執行了Action之後，才會基於所有的RDD關係來執行轉換。ex: .collect()
+       - Spark’s RDDs are by default recomputed each time you run an action on them. Now the reason behind it is that if it store all the RDDs content in memory then your memory would get exhausted very soon. So, it cannot keep each and every RDDs in memory.When you perform any action on it, it reads from the source data and performs transformations on it and give you the output for your action.However,you can persist the specific RDD using df.cache() or df.persist() and then it will store that RDD content in memory and when you perform any action second time of the RDD that depends upon the cached RDD then it won't read that from the source but it would use it from memory. 
+       - You only should cache the RDD if you are **performing multiple actions on it** or **there is a complex transformation logic that you don't want spark to perform every time an action is called**.
      - code example
        ``` python
        a = sc.textFile(filename) 
