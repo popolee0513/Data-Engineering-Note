@@ -14,6 +14,7 @@
      - [4 万字！PySpark 入门级学习教程来了！](https://zhuanlan.zhihu.com/p/436113747)
      - [Spark簡介](http://debussy.im.nuu.edu.tw/sjchen/BigData/Spark.pdf)
      - [Spark架構與原理這一篇就夠了](https://iter01.com/553814.html)
+     - [Apache Spark Performance Boosting](https://towardsdatascience.com/apache-spark-performance-boosting-e072a3ec1179)
 - pyspark
   - overview
     - Spark包含1個driver和若干個exexutor（在各個節點上）(master-slave architecture, the master is the driver, and slaves are the executors.)
