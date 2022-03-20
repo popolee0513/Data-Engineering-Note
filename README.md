@@ -40,7 +40,9 @@
      - After the operation is completed, the execution result will be returned to the Driver</br>
      
      <img src="https://github.com/popolee0513/Data-engineering-Note/blob/main/PIC/Jobs%2C%20stages%2C%20tasks.png" width="600" height="300"/>
-     
+   - Dependencies between RDDs
+     - [38-42](http://debussy.im.nuu.edu.tw/sjchen/BigData/Spark.pdf)
+   
    - what is RDD
       - In Spark, datasets are represented as a list of entries, where the list is broken up into many different partitions that are each stored on a different machine. Each partition holds a unique subset of the entries in the list. Spark calls datasets that it stores "Resilient Distributed Datasets" (RDDs).
       - 在Spark，所有的處理和計算任務都會被組織成一系列Resilient Distributed Dataset(彈性分布式數據集，簡稱RDD)上的transformations(轉換) 和 actions(動作)。
