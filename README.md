@@ -21,6 +21,11 @@
    - spark basic architecture
      
      <img src="https://github.com/popolee0513/Data-engineering-Note/blob/main/PIC/pyspark%E6%9E%B6%E6%A7%8B.png" width="900" height="500"/>
+  
+  - Jobs, stages, tasks
+     - An Application consists of a Driver and several Jobs, and a Job consists of multiple Stages
+     - When executing an Application, the Driver will apply for resources from the cluster manager, then start the Executor process that executes the Application, and send the application code and files to the Executor, and then the Executor will execute the Task.
+     - After the operation is completed, the execution result will be returned to the Driver
      
    - what is RDD
       - In Spark, datasets are represented as a list of entries, where the list is broken up into many different partitions that are each stored on a different machine. Each partition holds a unique subset of the entries in the list. Spark calls datasets that it stores "Resilient Distributed Datasets" (RDDs).
