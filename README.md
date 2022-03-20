@@ -24,6 +24,15 @@
      <img src="https://github.com/popolee0513/Data-engineering-Note/blob/main/PIC/pyspark%E6%9E%B6%E6%A7%8B.png" width="900" height="500"/>
      
      1. After submitting the job through SparkSubmit, the Client starts to build the spark context, that is, the execution environment of the application
+     2. SparkContext connects to the ClusterManager, registers with the resource manager and applies for the resources (core and memory) to execute the Executor
+     3. The ClusterManager decides on which worker to start the executor according to the application made by SparkContext and the heartbeat report of the worker(ClusterManager根據SparkContext提出的申請，根據worker的心跳報告，來決定到底在那個worker上啟動executor)
+     4. After the worker node receives the request, it will start the executor
+     5. The executor registers with the SparkContext, so that the driver knows which executors execute the application
+     6. SparkContext transfers Application code to executor
+     7. At the same time, SparkContext parses the Application code, builds a DAG graph, submits it to DAGScheduler for decomposition into stages, and the stage is sent to TaskScheduler
+     8. The TaskScheduler is responsible for assigning the Task to the corresponding worker, and finally submitting it to the executor for execution
+     9. The executor will start executing tasks, and report to SparkContext until all tasks are executed
+     10. After all tasks are completed, SparkContext logs out to the ClusterManager
   
   - Jobs, stages, tasks
      - An Application consists of a Driver and several Jobs, and a Job consists of multiple Stages
