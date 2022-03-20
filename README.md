@@ -24,7 +24,7 @@
      <img src="https://github.com/popolee0513/Data-engineering-Note/blob/main/PIC/pyspark%E6%9E%B6%E6%A7%8B.png" width="900" height="500"/>
      
      1. After submitting the job through SparkSubmit, the Client starts to build the spark context, that is, the execution environment of the application
-     2. SparkContext connects to the ClusterManager, registers with the resource manager and applies for the resources (core and memory) to execute the Executor
+     2. SparkContext connects to the ClusterManager, registers and applies for the resources (core and memory) to execute the Executor
      3. The ClusterManager decides on which worker to start the executor according to the application made by SparkContext and the heartbeat report of the worker(ClusterManager根據SparkContext提出的申請，根據worker的心跳報告，來決定到底在那個worker上啟動executor)
      4. After the worker node receives the request, it will start the executor
      5. The executor registers with the SparkContext, so that the driver knows which executors execute the application
