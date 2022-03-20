@@ -37,7 +37,10 @@
   - Jobs, stages, tasks
      - An Application consists of a Driver and several Jobs, and a Job consists of multiple Stages
      - When executing an Application, the Driver will apply for resources from the cluster manager, then start the Executor process that executes the Application, and send the application code and files to the Executor, and then the Executor will execute the Task.
-     - After the operation is completed, the execution result will be returned to the Driver</br>
+     - After the operation is completed, the execution result will be returned to the Driver
+     - Action -> Job -> Job Stages -> Tasks
+       - whenever you invoke an action, the SparkContext creates a job and runs the job scheduler to divide it into stages-->pipelineable
+       - tasks are created for every job stage and scheduled to the executors.
      
      <img src="https://github.com/popolee0513/Data-engineering-Note/blob/main/PIC/Jobs%2C%20stages%2C%20tasks.png" width="600" height="300"/>
    - Dependencies between RDDs
