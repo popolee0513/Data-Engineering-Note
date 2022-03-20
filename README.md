@@ -22,6 +22,8 @@
    - spark basic architecture
      
      <img src="https://github.com/popolee0513/Data-engineering-Note/blob/main/PIC/pyspark%E6%9E%B6%E6%A7%8B.png" width="900" height="500"/>
+     
+     - 1. After submitting the job through SparkSubmit, the Client starts to build the spark context, that is, the execution environment of the application
   
   - Jobs, stages, tasks
      - An Application consists of a Driver and several Jobs, and a Job consists of multiple Stages
