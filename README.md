@@ -131,7 +131,8 @@
        sorted(x.fullOuterJoin(y).collect())	
        Value:	[('a',(1,2)),('b',(4,None)),('c',(None,8))]
        ``` 
-       
+- pyspark SQL
+  - [Spark SQL 102 — Aggregations and Window Functions](https://towardsdatascience.com/spark-sql-102-aggregations-and-window-functions-9f829eaa7549)
 - pyspark streaming 
   - overview
     -  Spark Streaming first takes live input data streams and then divides them into batches. After this, the Spark engine processes those streams and generates the final stream results in batches. 
