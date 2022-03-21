@@ -134,6 +134,7 @@
 - pyspark SQL
   - [Spark SQL 102 — Aggregations and Window Functions](https://towardsdatascience.com/spark-sql-102-aggregations-and-window-functions-9f829eaa7549)
   - [Higher-Order Functions with Spark 3.1](https://towardsdatascience.com/higher-order-functions-with-spark-3-1-7c6cf591beaa)
+  - [The Most Complete Guide to pySpark DataFrames](https://towardsdatascience.com/the-most-complete-guide-to-pyspark-dataframes-2702c343b2e8)
 - pyspark streaming 
   - overview
     -  Spark Streaming first takes live input data streams and then divides them into batches. After this, the Spark engine processes those streams and generates the final stream results in batches. 
