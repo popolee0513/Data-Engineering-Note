@@ -137,6 +137,7 @@
   - [PySpark and SparkSQL Basics](https://towardsdatascience.com/pyspark-and-sparksql-basics-6cb4bf967e53)
   - [Spark SQL 102 — Aggregations and Window Functions](https://towardsdatascience.com/spark-sql-102-aggregations-and-window-functions-9f829eaa7549)
   - [Higher-Order Functions with Spark 3.1](https://towardsdatascience.com/higher-order-functions-with-spark-3-1-7c6cf591beaa)
+  - [pyspark sql code example](https://nbviewer.org/github/popolee0513/Data-engineering-Note/blob/main/pyspark/Pyspark%20SQL.ipynb)
   
   
 - pyspark performance related issue
