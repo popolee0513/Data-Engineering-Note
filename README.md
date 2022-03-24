@@ -144,7 +144,8 @@
     - Sometimes it might happen that a lot of data goes to a single executor since the same key is assigned for a lot of rows in our data and this might even result in OOM error(when doing groupby or join transformation, same key must stay in same partition and some keys may be more frequent or common which leads to the "skew"), the skewd partition will take longer time to process and make overall job execution time more (all other tasks will be just waiting for it to be completed)
     - how to solve
       - **Salting** [data skew in apache spark](https://medium.com/selectfrom/data-skew-in-apache-spark-f5eb194a7e2)
-         
+       
+       <script src="https://gist.github.com/shresthaShailav/a755d045b8dad485bbb2cbf013c89411.js"></script>   
     
   
 - pyspark streaming 
