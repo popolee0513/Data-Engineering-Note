@@ -144,8 +144,20 @@
     - Sometimes it might happen that a lot of data goes to a single executor since the same key is assigned for a lot of rows in our data and this might even result in OOM error(when doing groupby or join transformation, same key must stay in same partition and some keys may be more frequent or common which leads to the "skew"), the skewd partition will take longer time to process and make overall job execution time more (all other tasks will be just waiting for it to be completed)
     - how to solve
       - **Salting** [data skew in apache spark](https://medium.com/selectfrom/data-skew-in-apache-spark-f5eb194a7e2)
-       
-       <script src="https://gist.github.com/shresthaShailav/a755d045b8dad485bbb2cbf013c89411.js"></script>   
+  - Avoid using UDFs
+    - When we execute a DataFrame transformation using native or SQL functions, each of those transformations happen inside the JVM itself, which is where the       implementation of the function resides. But if we do the same thing using Python UDFs, something very different happens.
+     - First of all, the code cannot be executed in the JVM, it will have to be in the Python Runtime. To make this possible, each row of the DataFrame is serialized, sent to the Python Runtime and returned to the JVM. As you can imagine, it is nothing optimal.
+     
+     <img src="https://github.com/popolee0513/Data-engineering-Note/blob/main/PIC/avoid_UDF.png" width="600" height="400"/>
+     
+     [picture source:Avoiding UDFs in Apache Spark](https://blog.damavis.com/en/avoiding-udfs-in-apache-spark/?fbclid=IwAR3qYhj_cCP5ZFdnhbiTN8nbtE_1dhmc02Pt3qNTnarSZZmclDdFMaR7sx8)
+  - Use toPandas with pyArrow
+    - using pyarrow to efficiently transfer data between JVM and Python processes    
+      ```python 
+      pip install pyarrow
+      spark.conf.set(“spark.sql.execution.arrow.enabled”, “true”)
+      ```
+  
     
   
 - pyspark streaming 
