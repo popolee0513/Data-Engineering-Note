@@ -140,6 +140,10 @@
   
   
 - pyspark performance related issue
+  - adding checkpoint(pyspark.sql.DataFrame.checkpoint)
+    - Returns a checkpointed version of this Dataset. Checkpointing can be used to truncate the logical plan of this DataFrame, which is especially useful in iterative algorithms where the plan may grow exponentially.(When the query plan starts to be huge, the performance decreases dramatically)
+    - after checkpointing the data frame, you don't need to recalculate all of the previous transformations applied on the data frame, it is stored on disk forever
+    - When I checkpoint dataframe and I reuse it - It autmoatically read the data from the dir that we wrote the files? yes, it should be read automatically
   - Spark’s Skew Problem
     - Sometimes it might happen that a lot of data goes to a single executor since the same key is assigned for a lot of rows in our data and this might even result in OOM error(when doing groupby or join transformation, same key must stay in same partition and some keys may be more frequent or common which leads to the "skew"), the skewd partition will take longer time to process and make overall job execution time more (all other tasks will be just waiting for it to be completed)
     - how to solve
@@ -149,7 +153,6 @@
      - First of all, the code cannot be executed in the JVM, it will have to be in the Python Runtime. To make this possible, each row of the DataFrame is serialized, sent to the Python Runtime and returned to the JVM. As you can imagine, it is nothing optimal.
      
      <img src="https://github.com/popolee0513/Data-engineering-Note/blob/main/PIC/avoid_UDF.png" width="600" height="400"/>
-     
      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[picture source: Avoiding UDFs in Apache Spark](https://blog.damavis.com/en/avoiding-udfs-in-apache-spark/?fbclid=IwAR3qYhj_cCP5ZFdnhbiTN8nbtE_1dhmc02Pt3qNTnarSZZmclDdFMaR7sx8)
   - Use toPandas with pyArrow
     - using pyarrow to efficiently transfer data between JVM and Python processes    
