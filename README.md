@@ -172,7 +172,7 @@
         ```python 
         ../sales_table/product_id=P1
         ../sales_table/product_id=P2
-	```
+	```</br>
         - To avoid full table scan and to read only the records related to product_id='P1' we can partition (split table files) into multiple files based on the product_id column. 
         - By this the table's file will be split into two files one with product_id='P1' and other with product_id='P2'. Now when we execute the above query, it will scan only the product_id='P1' file.
         - We should be very careful while partitioning. That is, it should not be used for the columns where number of repeating values are very less (especially primary key columns) as it increases the number of partitioned files and increases the overhead.(it must keep all metadata for the file system in memory)
