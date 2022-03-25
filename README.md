@@ -168,7 +168,7 @@
  
     - [Best Practices for Bucketing in Spark SQL](https://medium.com/towards-data-science/best-practices-for-bucketing-in-spark-sql-ea9f23f7dd53)
     - [What is the difference between partitioning and bucketing a table in Hive ?](https://stackoverflow.com/questions/19128940/what-is-the-difference-between-partitioning-and-bucketing-a-table-in-hive?fbclid=IwAR0r9bxcdMCbWDArHa55We9hrpwNyED4QVHQ174TF97-e6jALid7OTzXGw4)
-      - Partitioning is used to obtain performance while querying the data.Example: if we are dealing with a large **employee** table and often run queries with WHERE clauses that restrict the results to a particular country or department.If table PARTITIONED BY country, DEPT then the partitioning structure will look like this</br>  
+      - Partitioning is used to obtain performance while querying the data.Example: if we are dealing with a large **employee** table and often run queries with WHERE clauses that restrict the results to a particular country or department.If table PARTITIONED BY country, DEPT then the partitioning structure will look like this
       &nbsp;&nbsp;.../employees/country=ABC/DEPT=XYZ.</br>
       If query limits for employee from country=ABC, it will only scan the contents of one directory country=ABC. This can dramatically improve query performance
       - However, if there are too many partitions, lots of small files will put lots of pressure on the name node(name node:each file is an object in name node)
