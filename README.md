@@ -163,31 +163,18 @@
       spark.conf.set(“spark.sql.execution.arrow.enabled”, “true”)
       ```
   - pyspark bucketing and Partitioning
-    - overall
-          
-      <img src="https://github.com/popolee0513/Data-engineering-Note/blob/main/PIC/partition_bucket.jpg" width="500" height="300"/>
-      
-      - PARTITIONING
-        - Partitioning is used to obtain performance while querying the data. For example, in the above table, if we write the below sql, it need to scan all the records in the table which reduces the performance and increases the overhead.</br>
-        ```python 
-        ../sales_table/product_id=P1
-        ../sales_table/product_id=P2
-	```
-	</br>
-        - To avoid full table scan and to read only the records related to product_id='P1' we can partition (split table files) into multiple files based on the product_id column. 
-        - By this the table's file will be split into two files one with product_id='P1' and other with product_id='P2'. Now when we execute the above query, it will scan only the product_id='P1' file.
-        - We should be very careful while partitioning. That is, it should not be used for the columns where number of repeating values are very less (especially primary key columns) as it increases the number of partitioned files and increases the overhead.(it must keep all metadata for the file system in memory)
-    - bucketing 
-      - Bucketing should be used when there are very few repeating values in a column (example - primary key column). This is similar to the concept of index on primary key column in the RDBMS. In our table, we can take Sales_Id column for bucketing. It will be useful when we need to query the sales_id column.
-      - Here we will further split the data into few more files on top of partitions.Since we have specified 3 buckets, it is split into 3 files each for each product_id</br>
-        ```sql
-        ..sales_table/product_id=P1/000000_0
-        ..sales_table/product_id=P1/000001_0
-        ..sales_table/product_id=P1/000002_0
-        ..sales_table/product_id=P2/000000_0
-        ..sales_table/product_id=P2/000001_0
-        ..sales_table/product_id=P2/000002_0
-        ```
+    - [Best Practices for Bucketing in Spark SQL](https://medium.com/towards-data-science/best-practices-for-bucketing-in-spark-sql-ea9f23f7dd53)
+    - bucketing(some notes)
+      - if you want to use bucket
+        - spark.conf.get("spark.sql.sources.bucketing.enabled")
+      - With bucketing, we can shuffle the data in advance and save it in this pre-shuffled state.(reduce shuffle during join operation)
+      - Bucket for optimized filtering is available in Spark 2.4+.if we use a filter on the field by which the table is bucketed,Spark will scan files only from the corresponding bucket and avoid a scan of the whole table
+      - check if the table bucketed
+        - spark.sql("DESCRIBE EXTENDED table_name").show()
+      - some scenarios
+        - Tables with different bucket numbers
+          - use "spark.sql.bucketing.coalesceBucketsInJoin.enabled" to make to tabels have same number of buckets
+        
 
 - pyspark streaming 
   - overview
