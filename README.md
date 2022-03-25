@@ -169,9 +169,6 @@
       
       - PARTITIONING
         - Partitioning is used to obtain performance while querying the data. For example, in the above table, if we write the below sql, it need to scan all the records in the table which reduces the performance and increases the overhead.
-       ```sql
-       select * from sales_table where product_id='P1'
-       ``` 
         - To avoid full table scan and to read only the records related to product_id='P1' we can partition (split hive table's files) into multiple files based on the product_id column. 
        - By this the table's file will be split into two files one with product_id='P1' and other with product_id='P2'. Now when we execute the above query, it will scan only the product_id='P1' file.
         ```sql
