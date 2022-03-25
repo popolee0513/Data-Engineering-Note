@@ -164,18 +164,22 @@
       ```
   - pyspark bucketing and Partitioning
    
-    <img src="https://github.com/popolee0513/Data-engineering-Note/blob/main/PIC/partition_bucket.jpg" width="600" height="400"/>
+    <img src="https://github.com/popolee0513/Data-engineering-Note/blob/main/PIC/partition_bucket.jpg" width="500" height="300"/>
  
     - [Best Practices for Bucketing in Spark SQL](https://medium.com/towards-data-science/best-practices-for-bucketing-in-spark-sql-ea9f23f7dd53)
+    - [What is the difference between partitioning and bucketing a table in Hive ?](https://stackoverflow.com/questions/19128940/what-is-the-difference-between-partitioning-and-bucketing-a-table-in-hive?fbclid=IwAR0r9bxcdMCbWDArHa55We9hrpwNyED4QVHQ174TF97-e6jALid7OTzXGw4)
+      - Partitioning is used to obtain performance while querying the data.Example: if we are dealing with a large **employee** table and often run queries with WHERE clauses that restrict the results to a particular country or department.If table PARTITIONED BY country, DEPT then the partitioning structure will look like this</br>  
+      &nbsp;&nbsp;&nbsp;.../employees/country=ABC/DEPT=XYZ.</br>
+      If query limits for employee from country=ABC, it will only scan the contents of one directory country=ABC. This can dramatically improve query performance
+      - However, if there are too many partitions, lots of small files will put lots of pressure on the name node(name node:each file is an object in name node)
     - bucketing(some notes)
       - if you want to use bucket then spark.conf.get("spark.sql.sources.bucketing.enabled") should return True
       - With bucketing, we can shuffle the data in advance and save it in this pre-shuffled state.(reduce shuffle during join operation)
       - Bucket for optimized filtering is available in Spark 2.4+.if we use a filter on the field by which the table is bucketed,Spark will scan files only from the corresponding bucket and avoid a scan of the whole table
       - check if the table bucketed: spark.sql("DESCRIBE EXTENDED table_name").show()
-      - some scenarios
-        - Tables with different bucket numbers
-          - use "spark.sql.bucketing.coalesceBucketsInJoin.enabled" to make to tabels have same number of buckets
-
+      - ❗❗❗ make sure that the columns for joining have same datatype for two tables
+      - ❗❗❗ it is ideal to have the same number of buckets on both sides of the tables in the join; however, if tables with different bucket numbers: just use "spark.sql.bucketing.coalesceBucketsInJoin.enabled" to make to tabels have same number of buckets
+       
 
 - pyspark streaming 
   - overview
