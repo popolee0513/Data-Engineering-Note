@@ -175,22 +175,18 @@
 	```
         - To avoid full table scan and to read only the records related to product_id='P1' we can partition (split table files) into multiple files based on the product_id column. 
         - By this the table's file will be split into two files one with product_id='P1' and other with product_id='P2'. Now when we execute the above query, it will scan only the product_id='P1' file.
-            ```sql
-            ..sales_table/product_id=P1
-            ..sales_table/product_id=P2
-            ```
         - We should be very careful while partitioning. That is, it should not be used for the columns where number of repeating values are very less (especially primary key columns) as it increases the number of partitioned files and increases the overhead.(it must keep all metadata for the file system in memory)
     - bucketing 
       - Bucketing should be used when there are very few repeating values in a column (example - primary key column). This is similar to the concept of index on primary key column in the RDBMS. In our table, we can take Sales_Id column for bucketing. It will be useful when we need to query the sales_id column.
-      - Here we will further split the data into few more files on top of partitions.Since we have specified 3 buckets, it is split into 3 files each for each product_id
-       ```sql
-       ..sales_table/product_id=P1/000000_0
-       ..sales_table/product_id=P1/000001_0
-       ..sales_table/product_id=P1/000002_0
-       ..sales_table/product_id=P2/000000_0
-       ..sales_table/product_id=P2/000001_0
-       ..sales_table/product_id=P2/000002_0
-       ```
+      - Here we will further split the data into few more files on top of partitions.Since we have specified 3 buckets, it is split into 3 files each for each product_id</br>
+        ```sql
+        ..sales_table/product_id=P1/000000_0
+        ..sales_table/product_id=P1/000001_0
+        ..sales_table/product_id=P1/000002_0
+        ..sales_table/product_id=P2/000000_0
+        ..sales_table/product_id=P2/000001_0
+        ..sales_table/product_id=P2/000002_0
+        ```
 
 - pyspark streaming 
   - overview
