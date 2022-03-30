@@ -192,10 +192,15 @@
    - ❗ Drawback: The interpretability of the feature is lost, and there is no way to find the original feature from the hashed vector
 
 
-
-
 - pyspark streaming 
   - overview
     -  Spark Streaming first takes live input data streams and then divides them into batches. After this, the Spark engine processes those streams and generates the final stream results in batches. 
     
     <img src="https://github.com/popolee0513/Data-engineering-Note/blob/main/PIC/pyspark-streaming-flow.png" width="650" height="150"/>
+  - learning resources
+    - [Apache Spark Structured Streaming — First Streaming Example (1 of 6)](https://medium.com/expedia-group-tech/apache-spark-structured-streaming-first-streaming-example-1-of-6-e8f3219748ef)
+    - [Apache Spark Structured Streaming — Input Sources (2 of 6)](https://medium.com/expedia-group-tech/apache-spark-structured-streaming-input-sources-2-of-6-6a72f798838c)
+    - [Apache Spark Structured Streaming — Output Sinks (3 of 6)](https://medium.com/expedia-group-tech/apache-spark-structured-streaming-output-sinks-3-of-6-ed3247545fbc)
+    - [Apache Spark Structured Streaming — Checkpoints and Triggers (4 of 6)](https://medium.com/expedia-group-tech/apache-spark-structured-streaming-checkpoints-and-triggers-4-of-6-b6f15d5cfd8d)
+    - [Apache Spark Structured Streaming — Operations (5 of 6)](https://medium.com/expedia-group-tech/apache-spark-structured-streaming-operations-5-of-6-40d907866fa7)
+    - [Apache Spark Structured Streaming — Watermarking (6 of 6)](https://medium.com/expedia-group-tech/apache-spark-structured-streaming-watermarking-6-of-6-1187542d779f)
