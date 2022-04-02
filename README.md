@@ -206,6 +206,5 @@
     - [Apache Spark Structured Streaming — Watermarking (6 of 6)](https://medium.com/expedia-group-tech/apache-spark-structured-streaming-watermarking-6-of-6-1187542d779f)
     - [Spark streaming output modes](https://medium.com/analytics-vidhya/spark-streaming-output-modes-600c689b6bf9)
 
-
 - Linux v.s. Shell Scripting basic
-  - [Linux-1](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-LX0117EN-SkillsNetwork/labs/module%201/Informational-File-and-Directory-Commands.md.html)
+  - [簡明 Linux Shell Script 入門教學](https://blog.techbridge.cc/2019/11/15/linux-shell-script-tutorial/)
