@@ -208,4 +208,4 @@
 
 
 - Linux v.s. Shell Scripting basic
-
+  - [Linux-1](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-LX0117EN-SkillsNetwork/labs/module%201/Informational-File-and-Directory-Commands.md.html)
