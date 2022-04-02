@@ -207,5 +207,5 @@
     - [Spark streaming output modes](https://medium.com/analytics-vidhya/spark-streaming-output-modes-600c689b6bf9)
 
 
-- linux v.s. Shell Scripting basic
+- Linux v.s. Shell Scripting basic
 
