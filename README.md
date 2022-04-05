@@ -208,6 +208,7 @@
 
 - Linux v.s. Shell Scripting basic
   - [簡明 Linux Shell Script 入門教學](https://blog.techbridge.cc/2019/11/15/linux-shell-script-tutorial/)
+  - [Parameter indirection](https://riptutorial.com/bash/example/7567/parameter-indirection)
   - $
     - $(variable) : return the value inside the variable name
     - $# : is the number of positional parameters
