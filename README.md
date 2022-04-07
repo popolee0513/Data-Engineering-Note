@@ -225,6 +225,9 @@
      - Producer: The message producer is the client that sends messages to the kafka broker.
      - Consumer : message consumer, client that fetches messages from kafka broker
      - A producer writes messages to the topic and a consumer reads them from the topic. This way we are decoupling them since the producer can write messages to the topic without waiting for the consumer. The consumer can then consume messages at its own pace. This is known as the **publish-subscribe pattern**
+     - Retention of records
+       - One thing that separates Kafka from other messaging systems is the fact that the records are not removed from the topic once they are consumed. This allows multiple consumers to consume the same record and it also allows the same consumer to read the records again (and again)
+       - Records are removed after a certain period of time. By default, Kafka will retain records in the topic for 7 days. Retention can be configured per topic
        
 - Linux v.s. Shell Scripting basic
   - [簡明 Linux Shell Script 入門教學](https://blog.techbridge.cc/2019/11/15/linux-shell-script-tutorial/)
