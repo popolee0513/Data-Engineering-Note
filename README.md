@@ -224,7 +224,7 @@
        - Each of the partitions could have replicas which are the same copy. This is helpful in avoiding single point of partition failure. 
      - Producer: The message producer is the client that sends messages to the kafka broker.
      - Consumer : message consumer, client that fetches messages from kafka broker
-     - A producer writes messages to the topic and a consumer reads them from the topic. This way we are decoupling them since the producer can write messages to the topic without waiting for the consumer. The consumer can then consume messages at its own pace. This is known as the publish-subscribe pattern.
+     - A producer writes messages to the topic and a consumer reads them from the topic. This way we are decoupling them since the producer can write messages to the topic without waiting for the consumer. The consumer can then consume messages at its own pace. This is known as the **publish-subscribe pattern**
        
 - Linux v.s. Shell Scripting basic
   - [簡明 Linux Shell Script 入門教學](https://blog.techbridge.cc/2019/11/15/linux-shell-script-tutorial/)
