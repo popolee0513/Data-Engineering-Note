@@ -230,6 +230,8 @@
        - Records are removed after a certain period of time. By default, Kafka will retain records in the topic for 7 days. Retention can be configured per topic
        
 - Linux v.s. Shell Scripting basic
+  - note
+    - [wget -O for non-existing save path?](https://stackoverflow.com/questions/11258271/wget-o-for-non-existing-save-path)
   - [簡明 Linux Shell Script 入門教學](https://blog.techbridge.cc/2019/11/15/linux-shell-script-tutorial/)
   - [Parameter indirection](https://riptutorial.com/bash/example/7567/parameter-indirection)
   - Command substitution
