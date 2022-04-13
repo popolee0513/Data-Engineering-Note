@@ -250,10 +250,10 @@
          - NoSQL databases are well suited to meet the large data size and **huge number of concurrent users**
         - high performance
           - The need to deliver fast response times even with large data sets and high concurrency is a must for modern applications, and the ability of NoSQL databases to leverage the resources of **large clusters of servers** makes them ideal for fast performance in these circumstances
+        - high availability
+          - Having a database run on a cluster of servers with **multiple copies** of the data makes for a more resilient solution than a single server solution  
         - flexible schema
           - NoSQL databases also have varied data structures which often are more useful for solving development needs than the rows and columns of relational datastores 
-        - high availability
-	  - Having a database run on a cluster of servers with **multiple copies** of the data makes for a more resilient solution than a single server solution  
       - NoSQL Database Categories 
       
      
