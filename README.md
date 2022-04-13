@@ -242,3 +242,19 @@
     - $# : is the number of positional parameters
     - $0 : is the name of the shell or shell script
     - $1, $2, $3, ... are the positional parameters
+ - NoSQL
+   - BASIC
+     - the benefits of using NOSQL
+       - high scalability 
+         - ability to scale horizontally(The elasticity of scaling both up and down to meet the varying demands of applications is key)
+         - NoSQL databases are well suited to meet the large data size and **huge number of concurrent users**
+       - high performance
+         - The need to deliver fast response times even with large data sets and high concurrency is a must for modern applications, and the
+ability of NoSQL databases to leverage the resources of **large clusters of servers** makes them ideal for fast performance in these circumstances
+       - high availability
+	 - having a database run on a cluster of servers with **multiple copies** of the data makes for a more resilient solution than a single server solution
+       - flexible schema
+         - NoSQL databases also have varied data structures which often are more useful for solving development needs than the rows and columns of relational datastores 
+       - NoSQL Database Categories 
+      
+     
