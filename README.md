@@ -255,7 +255,7 @@
         - flexible schema
           - NoSQL databases also have varied data structures which often are more useful for solving development needs than the rows and columns of relational datastores 
           
-          <img src="https://github.com/popolee0513/Data-Engineering-Note/blob/main/PIC/nosql-database-matrix.png" width="350" height="300"/>
+            <img src="https://github.com/popolee0513/Data-Engineering-Note/blob/main/PIC/nosql-database-matrix.png" width="350" height="300"/>
       - NoSQL Database Categories 
       
      
