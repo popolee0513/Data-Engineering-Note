@@ -254,7 +254,8 @@
           - Having a database run on a cluster of servers with **multiple copies** of the data makes for a more resilient solution than a single server solution  
         - flexible schema
           - NoSQL databases also have varied data structures which often are more useful for solving development needs than the rows and columns of relational datastores 
-          <img src="https://github.com/popolee0513/Data-Engineering-Note/blob/main/PIC/nosql-database-matrix.png" width="400" height="300"/>
+          
+          <img src="https://github.com/popolee0513/Data-Engineering-Note/blob/main/PIC/nosql-database-matrix.png" width="350" height="300"/>
       - NoSQL Database Categories 
       
      
