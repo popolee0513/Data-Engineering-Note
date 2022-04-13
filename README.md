@@ -253,7 +253,7 @@
         - flexible schema
           - NoSQL databases also have varied data structures which often are more useful for solving development needs than the rows and columns of relational datastores 
         - high availability
-	 - Having a database run on a cluster of servers with **multiple copies** of the data makes for a more resilient solution than a single server solution  
+	  - Having a database run on a cluster of servers with **multiple copies** of the data makes for a more resilient solution than a single server solution  
       - NoSQL Database Categories 
       
      
