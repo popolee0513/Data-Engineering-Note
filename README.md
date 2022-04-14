@@ -280,14 +280,20 @@
            - Not Suitable Situation:
              - `when you require ACID transactions`
              - if you find yourself forcing your data into an aggregate-oriented design
+      - Graph Oriented Database
+        - graph databases store information in entities (or nodes), and relationships (or edges). Graph databases are impressive when your data set resembles a graph-like data structure
+        - these databases tend not to scale as well horizontally. Sharding a graph database is not recommended
+        - Graph databases are also ACID transaction compliant, very much unlike the other NoSQL databases
+        - suitable for highly connected data
+          - Social networking sites, spatial, and map applications, recommendation engines
       - Column-based(Cassandra)
         - these databases focus on columns and groups of columns when storing and accessing data
         - fast search speed, strong scalability, low complexity
         - use case
           - Suitable Situation :
-            - Applications with potentially large amounts of data, as large as hundreds of terabytes of data
-            - Applications with dynamic fields
-            - Applications that can tolerate short-term inconsistencies in replicas
+            - applications with potentially large amounts of data, as large as hundreds of terabytes of data
+            - applications with dynamic fields
+            - applications that can tolerate short-term inconsistencies in replicas
           - Not Suitable Situation : `when you require ACID transactions`
       - Key-Value <key, value>
         - Architecture 
