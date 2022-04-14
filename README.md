@@ -262,8 +262,8 @@
 	        <img src="https://github.com/popolee0513/Data-Engineering-Note/blob/main/PIC/nosql-database-matrix.png" width="350" height="300"/>
     - NoSQL Database Categories (the note is mostly from Coursera IBM Data Engineering course)
       - useful link
-        -[NoSQL入門介紹及主要類型資料庫說明](https://www.tpisoftware.com/tpu/articleDetails/2016?fbclid=IwAR1jxNfC7O5vCC_g-gXpsXOkfW_cEG65DnZB2UmTanjRf_Uv4uD-4b5dXxk)
-	-[技術觀念 | CAP Theorem(CAP定理)](https://morosedog.gitlab.io/technology-20200224-tech-1/?fbclid=IwAR3vljqqBsD6feRfvnP9Y9f5E-g5aXlVWHwUTyyV5IeviPInxvOfKvmMAc0)
+        - [NoSQL入門介紹及主要類型資料庫說明](https://www.tpisoftware.com/tpu/articleDetails/2016?fbclid=IwAR1jxNfC7O5vCC_g-gXpsXOkfW_cEG65DnZB2UmTanjRf_Uv4uD-4b5dXxk)
+	- [技術觀念 | CAP Theorem(CAP定理)](https://morosedog.gitlab.io/technology-20200224-tech-1/?fbclid=IwAR3vljqqBsD6feRfvnP9Y9f5E-g5aXlVWHwUTyyV5IeviPInxvOfKvmMAc0)
       - document-based(mongoDB)
         - Architecture
           - Values are visible and can be queried
