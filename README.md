@@ -265,7 +265,7 @@
         - Architecture 
           - Shard easily
           - Scale well
-          - Ideal for CRUD(create,read,update,delete) operation
+          - `Ideal for CRUD(create,read,update,delete) operation`
           - Least complex   
           - Not intended for complex queries
           - Value blobs are opaque to database
