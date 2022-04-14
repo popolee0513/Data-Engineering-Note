@@ -261,10 +261,12 @@
 	        <img src="https://github.com/popolee0513/Data-Engineering-Note/blob/main/PIC/nosql-database-matrix.png" width="350" height="300"/>
     - NoSQL Database Categories 
       
-      | Tables        | Are           | Cool  |
-      | ------------- |-------------| ----- |
-      | 第三欄        | 靠右對齊      | $1600 |
-      | 第二欄        | 置中對齊      |   $12 |
-      | 斑馬條紋      | 是整齊的      |    $1 |
+      | Type        | Advantage         | disadvantage  | use case
+      | ------------- |------------- | ----- | ----- |
+      | Key-Value       | scale quite
+well and shard easily
+Key-Value stores are represented as a hashmap| $1600 |        |
+      | 第二欄        | 置中對齊      |   $12 |        |
+      | 斑馬條紋      | 是整齊的      |    $1 |         |
 
      
