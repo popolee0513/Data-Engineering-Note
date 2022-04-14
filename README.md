@@ -285,6 +285,9 @@
         - fast search speed, strong scalability, low complexity
         - use case
           - Suitable Situation :
+            - Applications with potentially large amounts of data, as large as hundreds of terabytes of data
+            - Applications with dynamic fields
+            - Applications that can tolerate short-term inconsistencies in replicas
           - Not Suitable Situation : `when you require ACID transactions`
       - Key-Value <key, value>
         - Architecture 
