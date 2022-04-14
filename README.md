@@ -244,6 +244,7 @@
     - $1, $2, $3, ... are the positional parameters
  - RDBMS
    - [Database Transaction & ACID](https://oldmo860617.medium.com/database-transaction-acid-156a3b75845e)
+   
  - NoSQL
    - the benefits of using NOSQL
      - high scalability 
@@ -260,8 +261,22 @@
             
 	        <img src="https://github.com/popolee0513/Data-Engineering-Note/blob/main/PIC/nosql-database-matrix.png" width="350" height="300"/>
     - NoSQL Database Categories (the note is most )
-      -  
-      - Key-Value
+      - document-based(mongoDB)
+        - Architecture
+          - Values are visible and can be queried
+          - Each piece of data is considered as a document(json/xml)
+          - Each document is allowed to has it own schema(=>flexible)
+          - Contents of document database can be queried and indexed 
+          - Can Scale Horizontally
+          - Shard easily
+        - use case
+          - Suitable Situation :
+            - event logging for apps(each event can be viewed as a document)
+            - Online blogs  - each user, post, comment, like or action is represented by a document
+           - Not Suitable Situation:
+             - `when you require ACID transactions`
+             - if you find yourself forcing your data into an aggregate-oriented design
+      - Key-Value <key, value>
         - Architecture 
           - Shard easily
           - Scale well
@@ -275,6 +290,6 @@
               - storing in-app user-profile and preference
             - Not Suitable Situation: When your data is interconnected with a number of many-to-many relationships in the data
               - social networking or recommendation engine
-              - if your use case requires a high level of consistency for multi-operation transactions, involving multiple keys, you may want to look more towards databases that provide ACID 
+              - `when you require ACID transactions`
               - if you expect the need to query based on value versus key, it may be wise to consider the `Document category of NoSQL databases`
          
