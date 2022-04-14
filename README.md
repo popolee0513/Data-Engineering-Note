@@ -242,6 +242,8 @@
     - $# : is the number of positional parameters
     - $0 : is the name of the shell or shell script
     - $1, $2, $3, ... are the positional parameters
+ - RDBMS
+   - [Database Transaction & ACID](https://oldmo860617.medium.com/database-transaction-acid-156a3b75845e)
  - NoSQL
    - the benefits of using NOSQL
      - high scalability 
@@ -259,4 +261,10 @@
 	        <img src="https://github.com/popolee0513/Data-Engineering-Note/blob/main/PIC/nosql-database-matrix.png" width="350" height="300"/>
     - NoSQL Database Categories 
       
+      | Tables        | Are           | Cool  |
+      | ------------- |-------------| ----- |
+      | 第三欄        | 靠右對齊      | $1600 |
+      | 第二欄        | 置中對齊      |   $12 |
+      | 斑馬條紋      | 是整齊的      |    $1 |
+
      
