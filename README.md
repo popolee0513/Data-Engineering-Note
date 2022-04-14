@@ -244,6 +244,7 @@
     - $1, $2, $3, ... are the positional parameters
  - RDBMS
    - [Database Transaction & ACID](https://oldmo860617.medium.com/database-transaction-acid-156a3b75845e)
+   - [[極短篇] 資料庫的 ACID 是什麼？](https://lance.coderbridge.io/2021/04/24/short-what-is-acid/)
    
  - NoSQL
    - the benefits of using NOSQL
@@ -279,6 +280,12 @@
            - Not Suitable Situation:
              - `when you require ACID transactions`
              - if you find yourself forcing your data into an aggregate-oriented design
+      - Column-based(Cassandra)
+        - these databases focus on columns and groups of columns when storing and accessing data
+        - fast search speed, strong scalability, low complexity
+        - use case
+          - Suitable Situation :
+          - Not Suitable Situation : `when you require ACID transactions`
       - Key-Value <key, value>
         - Architecture 
           - Shard easily
