@@ -263,7 +263,8 @@
       
       | Type        | Advantage         | disadvantage  | use case
       | ------------- |------------- | ----- | ----- |
-      | Key-Value       | scale quite well and shard easily<br> Key-Value stores are represented as a hashmap| $1600 |        |
+      | Key-Value       | least complex<br>scale quite well and shard easily<br>powerful for basic
+Create-Read-Update-Delete operations<br>| $1600 |        |
       | 第二欄        | 置中對齊      |   $12 |        |
       | 斑馬條紋      | 是整齊的      |    $1 |         |
 
