@@ -260,11 +260,15 @@
             
 	        <img src="https://github.com/popolee0513/Data-Engineering-Note/blob/main/PIC/nosql-database-matrix.png" width="350" height="300"/>
     - NoSQL Database Categories 
-      
-      | Type | Advantage | disadvantage | use case |
-      | ------------- |------------- | ----- | ----- |
-      | Key-Value  | 1. least complex<br>2. scale quite well and shard easily<br>3. powerful for basic Create-Read-Update-Delete operations|1. usually not meant for complex queriesa<br>2. The value blob is opaque|        |
-      | 第二欄        | 置中對齊      |   $12 |        |
-      | 斑馬條紋      | 是整齊的      |    $1 |         |
-
+      - Key-Value
+        - Advantage 
+          - Shard easily
+          - Scale well
+          - Ideal for CRUD(create,read,update,delete) operation
+          - Least complex
+         - Disadvantage
+           - Not intended for complex queries
+           - Value blobs are opaque to database
+          - use case
+            - suitable: anytime you need quick performance for basic Create-Read-Update-Delete operations and `your data is not interconnected`
      
