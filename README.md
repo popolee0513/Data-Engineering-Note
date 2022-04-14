@@ -270,5 +270,10 @@
            - Not intended for complex queries
            - Value blobs are opaque to database
           - use case
-            - suitable: anytime you need quick performance for basic Create-Read-Update-Delete operations and `your data is not interconnected`
-     
+            - Suitable Situation : Anytime you need quick performance for basic Create-Read-Update-Delete operations and `your data is not interconnected`
+              - storing and retrieving session information for a Web application
+              - storing in-app user-profile and preference
+            - Not Suitable Situation: When your data is interconnected with a number of many-to-many relationships in the data
+              - social networking or recommendation engine
+              - if your use case requires a high level of consistency for multi-operation transactions, involving multiple keys, you may want to look more towards databases that provide ACID 
+              - if you expect the need to query based on value versus key, it may be wise to consider the `Document category of NoSQL databases`
