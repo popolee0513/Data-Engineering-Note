@@ -263,8 +263,8 @@
       
       | Type        | Advantage         | disadvantage  | use case
       | ------------- |------------- | ----- | ----- |
-      | Key-Value       | least complex<br>scale quite well and shard easily<br>powerful for basic
-Create-Read-Update-Delete operations<br>| $1600 |        |
+      | Key-Value       | least complex<br>scale quite well and shard easily<br>powerful for basic Create-Read-Update-Delete operations<br>|usually not meant for complex queries attempting to connect multiple pieces of data<br>The value blob is opaque and therefore
+typically will have less flexibility when it comes to indexing and querying the data than other database types |        |
       | 第二欄        | 置中對齊      |   $12 |        |
       | 斑馬條紋      | 是整齊的      |    $1 |         |
 
