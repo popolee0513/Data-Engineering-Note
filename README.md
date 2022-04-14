@@ -246,6 +246,8 @@
    - the benefits of using NOSQL
      - high scalability 
        - ability to scale horizontally(The elasticity of scaling both up and down to meet the varying demands of applications is key)
+       
+         <img src="https://github.com/popolee0513/Data-Engineering-Note/blob/main/PIC/horizontal_scaling.jpg" width="0" height="300"/>
        - NoSQL databases are well suited to meet the large data size and **huge number of concurrent users**
      - high performance
         - The need to deliver fast response times even with large data sets and high concurrency is a must for modern applications, and the ability of NoSQL databases to leverage the resources of **large clusters of servers** makes them ideal for fast performance in these circumstances
