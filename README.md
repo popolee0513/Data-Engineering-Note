@@ -246,6 +246,9 @@
  - RDBMS
    - [Database Transaction & ACID](https://oldmo860617.medium.com/database-transaction-acid-156a3b75845e)
    - [[極短篇] 資料庫的 ACID 是什麼？](https://lance.coderbridge.io/2021/04/24/short-what-is-acid/)
+   - SQL
+     - [6 Key Concepts, to Master Window Functions](https://www.startdataengineering.com/post/6-concepts-to-clearly-understand-window-functions/)
+     - [What are Common Table Expressions(CTEs) and when to use them?](https://www.startdataengineering.com/post/using-common-table-expression-in-redshift/)
    
  - NoSQL
    - the benefits of using NOSQL
