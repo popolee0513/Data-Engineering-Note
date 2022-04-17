@@ -322,8 +322,7 @@
      - basic architecture
        - consistency is more important than availability
        - Primary-Secondary architecture
-       
-         <img src="https://github.com/popolee0513/Data-Engineering-Note/blob/main/PIC/master_slave.png" width="400" height="250"/>
+         - Only Primary node is readable and writable, Primary node receive all write requests, and then synchronizes data to all Secondary. A Replica Set has only one Primary node. When the Primary fails, other Secondary nodes will re-elect a Primary node so that services can be provided again.
    - Cassandra
      - use case
        - the use cases where you need to `record some data extremely rapidly` and `make it available immediately for read operations`, and all the while hundreds of thousands of requests are generated
