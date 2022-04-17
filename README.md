@@ -323,6 +323,7 @@
        - consistency is more important than availability
        - Primary-Secondary architecture
          - Only Primary node is readable and writable, Primary node receives all write requests, and then synchronizes data to all Secondary. A Replica Set has only one Primary node. When the Primary fails, other Secondary nodes will re-elect a Primary node so that services can be provided again.
+         - Secondary nodes are only readable( reducing the read pressure on the primary (Primary))
    - Cassandra
      - use case
        - the use cases where you need to `record some data extremely rapidly` and `make it available immediately for read operations`, and all the while hundreds of thousands of requests are generated
