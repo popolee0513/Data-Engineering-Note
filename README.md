@@ -321,8 +321,8 @@
    - Cassandra
      - use case
        - the use cases where you need to `record some data extremely rapidly` and `make it available immediately for read operations`, and all the while hundreds of thousands of requests are generated
-       - dose not support join  ==> use spark
-       - limited aggregations support ==> use spark
+       - dose not support join  ➡➡➡ use spark
+       - limited aggregations support ➡➡➡ use spark
        - limited support of transactions 
      - basic architecture
        - A Cassandra cluster is a collection of instances, called nodes
@@ -331,5 +331,5 @@
           - All the nodes in a cluster play the same role
           - There is no master node and every node can perform all database operations and each can serve client requests
           - `The node that first receives a request from a client is the coordinator.` It is the job of the coordinator to forward the request to the nodes holding the data for that request and to send the results back to the coordinator. Any node in the cluster can act as a coordinator.  
-          - 
+          
        
