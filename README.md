@@ -323,7 +323,7 @@
        - consistency is more important than availability
        - Primary-Secondary architecture
        
-         <img src="https://github.com/popolee0513/Data-Engineering-Note/blob/main/PIC/master_slave.png" width="400" height="300"/>
+         <img src="https://github.com/popolee0513/Data-Engineering-Note/blob/main/PIC/master_slave.png" width="400" height="250"/>
    - Cassandra
      - use case
        - the use cases where you need to `record some data extremely rapidly` and `make it available immediately for read operations`, and all the while hundreds of thousands of requests are generated
