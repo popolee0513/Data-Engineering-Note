@@ -318,12 +318,7 @@
      - [CAP定理101—分散式系統，有一好沒兩好](https://medium.com/%E5%BE%8C%E7%AB%AF%E6%96%B0%E6%89%8B%E6%9D%91/cap%E5%AE%9A%E7%90%86101-3fdd10e0b9a)
      - [技術觀念 | CAP Theorem(CAP定理)](https://morosedog.gitlab.io/technology-20200224-tech-1/?fbclid=IwAR3vljqqBsD6feRfvnP9Y9f5E-g5aXlVWHwUTyyV5IeviPInxvOfKvmMAc0)
      - [[System Design] 淺談Database Replication，有何優缺點、做法及何處可見?](https://homuchen.com/posts/what-and-why-database-replication-advantage-and-disadvantage/)
-   - mongodb
-     - basic architecture
-       - consistency is more important than availability
-       - Primary-Secondary architecture
-         - Only Primary node is readable and writable, Primary node receives all write requests, and then synchronizes data to all Secondary. A Replica Set has only one Primary node. When the Primary fails, other Secondary nodes will re-elect a Primary node so that services can be provided again.
-         - Secondary nodes are only readable(reducing the read pressure on the primary node)
+  
    - Cassandra
      - use case
        - the use cases where you need to `record some data extremely rapidly` and `make it available immediately for read operations`, and all the while hundreds of thousands of requests are generated
@@ -338,4 +333,20 @@
           - There is no master node and every node can perform all database operations and each can serve client requests
           - `The node that first receives a request from a client is the coordinator.` It is the job of the coordinator to forward the request to the nodes holding the data for that request and to send the results back to the coordinator. Any node in the cluster can act as a coordinator.  
           
+       -
        
+       
+       
+       
+       
+       
+       
+       
+       
+       
+        - mongodb
+     - basic architecture
+       - consistency is more important than availability
+       - Primary-Secondary architecture
+         - Only Primary node is readable and writable, Primary node receives all write requests, and then synchronizes data to all Secondary. A Replica Set has only one Primary node. When the Primary fails, other Secondary nodes will re-elect a Primary node so that services can be provided again.
+         - Secondary nodes are only readable(reducing the read pressure on the primary node)
