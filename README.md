@@ -317,7 +317,6 @@
    - CAP Theorem for NOSQL         
      - [CAP定理101—分散式系統，有一好沒兩好](https://medium.com/%E5%BE%8C%E7%AB%AF%E6%96%B0%E6%89%8B%E6%9D%91/cap%E5%AE%9A%E7%90%86101-3fdd10e0b9a)
      - [技術觀念 | CAP Theorem(CAP定理)](https://morosedog.gitlab.io/technology-20200224-tech-1/?fbclid=IwAR3vljqqBsD6feRfvnP9Y9f5E-g5aXlVWHwUTyyV5IeviPInxvOfKvmMAc0)
-     - [[System Design] 淺談Database Replication，有何優缺點、做法及何處可見?](https://homuchen.com/posts/what-and-why-database-replication-advantage-and-disadvantage/)
   
    - Cassandra
      - use case
