@@ -330,7 +330,7 @@
        - A Cassandra cluster is a collection of instances, called nodes
        - favors availability over consistency
        - `peer-to-peer architecture`
-          - the nodes communicate through a protocol called gosssip and they use this transfer information(ex: the status of the node) to one another. 
+          - The nodes communicate through a protocol called `gosssip` and they use this transfer information(ex: the status of the node) to one another. 
           - All the nodes in a cluster play the same role
           - There is no master node and every node can perform all database operations and each can serve client requests
           - `The node that first receives a request from a client is the coordinator.` It is the job of the coordinator to forward the request to the nodes holding the data for that request and to send the results back to the coordinator. Any node in the cluster can act as a coordinator.  
