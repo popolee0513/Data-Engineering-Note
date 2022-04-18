@@ -322,31 +322,17 @@
    - Cassandra
      - use case
        - the use cases where you need to `record some data extremely rapidly` and `make it available immediately for read operations`, and all the while hundreds of thousands of requests are generated
-       - dose not support join  ➡➡➡ use spark
-       - limited aggregations support ➡➡➡ use spark
-       - limited support of transactions 
+       - limitation
+         - dose not support join  ➡➡ use spark
+         - limited aggregations support ➡➡ use spark
+         - limited support of transactions 
      - basic architecture
        - A Cassandra cluster is a collection of instances, called nodes
        - favors availability over consistency
        - `peer-to-peer architecture`
+          - the nodes communicate through a protocol called gosssip and they use this transfer information(ex: the status of the node) to one another. 
           - All the nodes in a cluster play the same role
           - There is no master node and every node can perform all database operations and each can serve client requests
           - `The node that first receives a request from a client is the coordinator.` It is the job of the coordinator to forward the request to the nodes holding the data for that request and to send the results back to the coordinator. Any node in the cluster can act as a coordinator.  
           
-       -
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-        - mongodb
-     - basic architecture
-       - consistency is more important than availability
-       - Primary-Secondary architecture
-         - Only Primary node is readable and writable, Primary node receives all write requests, and then synchronizes data to all Secondary. A Replica Set has only one Primary node. When the Primary fails, other Secondary nodes will re-elect a Primary node so that services can be provided again.
-         - Secondary nodes are only readable(reducing the read pressure on the primary node)
+ 
