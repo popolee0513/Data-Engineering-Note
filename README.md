@@ -336,7 +336,7 @@
       - CQL
         - useful resources
           - [Cassandra權威指南,3rd - Data Modeling筆記](https://zhuanlan.zhihu.com/p/149969643?fbclid=IwAR1H0-UukcbwtvrOgJoizgf0lrm0nw5ujMMzOOS21XbrpEyLBua5L-b5Ajg)
-        - QUERY FIRST DESIGN :  In Cassandra, we will first design the storage method of data according to our data retrieval requirements(`design the data model from your query requirements`)
+        - QUERY FIRST DESIGN :  In Cassandra, we will first design the storage method of data according to our data retrieval requirements(`design the data model from your query requirements`)(`針對會用到的query 需求設計一個個table`)
         - A key goal when designing tables with Cassandra is that we need to minimize the number of partitions we need to search for a query . Because in Cassandra, the data of one of our partitions is a storage unit that cannot span nodes. A query that only needs to query data on one node tends to perform optimally . ➡➡ 想想從一個node取資料 v.s. 從很多nodes撈取資料所耗費時間
         - Sorting is handled a little differently in Cassandra; it's a design consideration. The sorting method of the results of a query is fixed, and it is completely determined when the table is created clustering columns. `CQL syntax does not support ORDER BY` , only supports ascending or descending order Clustering Columnsto decide .
           
