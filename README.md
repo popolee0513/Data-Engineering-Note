@@ -136,7 +136,6 @@
 - pyspark SQL
   - [The Most Complete Guide to pySpark DataFrames](https://towardsdatascience.com/the-most-complete-guide-to-pyspark-dataframes-2702c343b2e8)
   - [9 most useful functions for PySpark DataFrame](https://www.analyticsvidhya.com/blog/2021/05/9-most-useful-functions-for-pyspark-dataframe/?fbclid=IwAR00ptznUg4AYJW6lq2-PG3Egc_F21mw1c5zKLOdY6Igi6ZUtUqvemPIm6A)
-  - [PySpark and SparkSQL Basics](https://towardsdatascience.com/pyspark-and-sparksql-basics-6cb4bf967e53)
   - [Spark SQL 102 — Aggregations and Window Functions](https://towardsdatascience.com/spark-sql-102-aggregations-and-window-functions-9f829eaa7549)
   - [Higher-Order Functions with Spark 3.1](https://towardsdatascience.com/higher-order-functions-with-spark-3-1-7c6cf591beaa)
   - [pyspark sql code example](https://nbviewer.org/github/popolee0513/Data-engineering-Note/blob/main/pyspark/Pyspark%20SQL.ipynb)
