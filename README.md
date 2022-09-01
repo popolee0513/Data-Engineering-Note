@@ -3,13 +3,10 @@
 - Useful link
   - Data engineering basic idea
     - [資料科學家為何需要了解資料工程](https://leemeng.tw/why-you-need-to-learn-data-engineering-as-a-data-scientist.html)
-  - Airflow basic
-    - [Scheduling a SQL script, using Apache Airflow, with an example](https://www.startdataengineering.com/post/how-to-schedule-a-sql-script-using-apache-airflow-with-an-example/)
-    - [一段 Airflow 與資料工程的故事：談如何用 Python 追漫畫連載](https://leemeng.tw/a-story-about-airflow-and-data-engineering-using-how-to-use-python-to-catch-up-with-latest-comics-as-an-example.html)
-   - Amazon Kinesis
+  - Amazon Kinesis
      - [利用 Kinesis 處理串流資料並建立資料湖](https://leemeng.tw/use-kinesis-streams-and-firehose-to-build-a-data-lake.html)
      - 可以把Kinesis Data Stream裡的shards想成港口，港口越多吞吐量越大，而Firehose delivery stream則是把貨物(資料)運送到目的地的船隻
-   - Pyspark
+  - Pyspark
      - [Spark Install Instructions - Windows](https://mas-dse.github.io/DSE230/installation/windows/)
      - [《巨量資料技術與應用-Spark (Python篇)》實務操作講義- RDD運作基礎](http://debussy.im.nuu.edu.tw/sjchen/BigData-Spark/%E5%B7%A8%E9%87%8F%E8%B3%87%E6%96%99%E6%8A%80%E8%A1%93%E8%88%87%E6%87%89%E7%94%A8%E6%93%8D%E4%BD%9C%E8%AC%9B%E7%BE%A9-RDD%E9%81%8B%E4%BD%9C%E5%9F%BA%E7%A4%8E.html)
      - [PySpark Tutorial](https://sparkbyexamples.com/)
