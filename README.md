@@ -124,7 +124,7 @@ together and then in second stage `Spark will put all records with the same keys
     - using pyarrow to efficiently transfer data between JVM and Python processes    
       ```python 
       pip install pyarrow
-      spark.conf.set(“spark.sql.execution.arrow.enabled”, “true”)
+      spark.conf.set("spark.sql.execution.arrow.enabled", "true")
       ```
   - pyspark bucketing and Partitioning
    
