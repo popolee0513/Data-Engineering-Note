@@ -69,32 +69,11 @@
        - reduceByKey(fun):將具有相同key的key value pair之所有值做合併(Merge)計算
     
          <img src="https://github.com/popolee0513/Data-engineering-Note/blob/main/PIC/reduce_by_key.png" width="450" height="400"/>
-       - groupByKey():以key進行分組，具有相同key的元素之values會形成一個value list (數值串列，或稱Iterable)
+       - pyspark groupBy: In first stage, for each executor, inside each partition, it aggregates the data with same groupbykey 
+together and then in second stage `Spark will put all records with the same keys in the same partition`.
        
          <img src="https://github.com/popolee0513/Data-engineering-Note/blob/main/PIC/groupby_key.png" width="400" height="400"/>      
-     - Broadcast Variables
-       - Keep read-only variable cached on workers(Ship to each worker only once instead of with each task)
-       - Like sending a large, read-only lookup table to all the nodes
-       
-       <img src="https://github.com/popolee0513/Data-engineering-Note/blob/main/PIC/Pyspark%20broadcast.png" width="850" height="500"/>
-       
-       [[Spark內核] 第42課：Spark Broadcast內幕解密：Broadcast運行機制徹底解密、Broadcast源碼解析、Broadcast最佳實踐 ](https://www.cnblogs.com/jcchoiling/p/6538780.html)
-     - pyspark 的 Accumulators
-       - Accumulators are variables that are used for aggregating information across the executors，for example, the following code can count empty lines during the workers rununing the action
-       ``` python
-       file = sc.textFile(inputFile)
-       blankLines = sc.accumulator(0)
-       def extractCallSigns(line):
-           global blankLines #	Make the global	variable accessible
-           if (line ==""):
-	         blankLines+=1
-	       return line.split(" ")	
-       callSigns = file.flatMap(extractCallSigns)
-       print("Blank lines: %d"	% blankLines.value)	
-       ``` 
-       - Worker tasks on a Spark cluster can add values to an Accumulator with the += operator, but only the driver program is allowed to access its value, using value.(只有driver能獲取Accumulator的值(調用value方法), Task只能對其做增加操作)
-     - rdd foreach
-       - [difference between rdd foreach and rdd map](https://stackoverflow.com/questions/41388597/difference-between-rdd-foreach-and-rdd-map)
+     
      - pyspark 的join
      
        ``` python
