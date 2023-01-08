@@ -137,8 +137,8 @@ together and then in second stage `Spark will put all records with the same keys
       .../employees/country=ABC/DEPT=XYZ</br>
       If query limits for employee from country=ABC, it will only scan the contents of one directory country=ABC. This can dramatically improve query performance
       - However, if there are too many partitions, lots of small files will put lots of pressure on the name node(name node:each file is an object in name node)
-    - bucketing(some notes)
-      - use hash(x) mod n to assign each data to a bucket
+    - `Bucketing(some notes)`
+      - use Hash(x) mod n to assign each data to a bucket
       - If you are joining a big dataframe multiple times throughout your pyspark application then save that table as bucketed tables and read them back in pyspark as dataframe. this way you can avoid multiple shuffles during join as data is already pre-shuffled
       - if you want to use bucket then spark.conf.get("spark.sql.sources.bucketing.enabled") should return True
       - With bucketing, we can shuffle the data in advance and save it in this pre-shuffled state(reduce shuffle during join operation)
