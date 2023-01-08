@@ -126,7 +126,7 @@ together and then in second stage `Spark will put all records with the same keys
       pip install pyarrow
       spark.conf.set("spark.sql.execution.arrow.enabled", "true")
       ```
-  - pyspark bucketing and Partitioning
+  - `pyspark bucketing and Partitioning`
    
     <img src="https://github.com/popolee0513/Data-engineering-Note/blob/main/PIC/partition_bucket.jpg" width="500" height="300"/>
  
