@@ -17,30 +17,16 @@
 - pyspark
   - overview
     - Spark包含1個driver和若干個exexutor（在各個節點上）(master-slave architecture, the master is the driver, and slaves are the executors)
-    - Driver會把計算任務分成一系列小的task，然後送到executor執行。executor之間可以通信，在每個executor完成自己的task以後，所有的信息會被傳回。
-     
+    - Spark clusters(often contain multiple computers that behave as executors) are managed by a `master`. A driver that wants to execute a Spark job will send the job to the master, which in turn will divide the work among the cluster's executors. If any executor fails and becomes offline for any reason, the master will reassign the task to another executor.
+    
      <img src="https://github.com/popolee0513/Data-engineering-Note/blob/main/PIC/spark_structure.png" width="500" height="300"/>
-   - spark basic architecture
-     
-     <img src="https://github.com/popolee0513/Data-engineering-Note/blob/main/PIC/pyspark%E6%9E%B6%E6%A7%8B.png" width="900" height="500"/>
-     
-     1. After submitting the job through SparkSubmit, the Client starts to build the spark context(SparkContext是Spark的入口，相當於應用程序的main函數), that is, the execution environment of the application
-     2. SparkContext connects to the ClusterManager, registers and applies for the resources (core and memory) to execute the Executor
-     3. The ClusterManager decides on which worker to start the executor according to the application made by SparkContext and the heartbeat report of the worker(ClusterManager根據SparkContext提出的申請，根據worker的心跳報告，來決定到底在那個worker上啟動executor)
-     4. After the worker node receives the request, it will start the executor
-     5. The executor registers with the SparkContext, so that the driver knows which executors execute the application
-     6. SparkContext transfers Application code to executor
-     7. At the same time, SparkContext parses the Application code, builds a DAG graph, submits it to DAGScheduler for decomposition into stages, and the stage is sent to TaskScheduler
-     8. The TaskScheduler is responsible for assigning the Task to the corresponding worker, and finally submitting it to the executor for execution
-     9. The executor will start executing tasks, and report to SparkContext until all tasks are executed
-     10. After all tasks are completed, SparkContext logs out to the ClusterManager
   
   - Jobs, stages, tasks
      - An Application consists of a Driver and several Jobs, and a Job consists of multiple Stages
      - When executing an Application, the Driver will apply for resources from the cluster manager, then start the Executor process that executes the Application, and send the application code and files to the Executor, and then the Executor will execute the Task
      - After the operation is completed, the execution result will be returned to the Driver
      - Action -> Job -> Job Stages -> Tasks
-       - whenever you invoke an action, the SparkContext creates a job and runs the job scheduler to divide it into stages-->pipelineable
+       - whenever you invoke an action, the SparkContext(Spark的入口，相當於應用程序的main函數) creates a job and runs the job scheduler to divide it into stages-->pipelineable
        - tasks are created for every job stage and scheduled to the executors
      
      <img src="https://github.com/popolee0513/Data-engineering-Note/blob/main/PIC/Jobs%2C%20stages%2C%20tasks.png" width="600" height="300"/>
