@@ -148,12 +148,12 @@ together and then in second stage `Spark will put all records with the same keys
       - ❗❗❗ it is ideal to have the same number of buckets on both sides of the tables in the join; however, if tables with different bucket numbers: just use "spark.sql.bucketing.coalesceBucketsInJoin.enabled" to make to tabels have same number of buckets
 
 - pyspark mllib note
- - Feature Hashing
-   - Suppose we have 1 million emails as a training set, each email has only a few dozen words on average, but the vocabulary may be hundreds of thousands, the input data created in this way is a high-dimensional sparse matrix, which is not a friendly input for many machine learning algorithms. 
-   - Compared with one-hot encoding , there is no need to maintain a variable table in advance(the conversion of new features does not affect the length of the input feature (because it is defined in advance. hash range)
-   - Online learning is convenient, and the time and space complexity of model training is reduced
-   - Vectors that were originally very sparse may become less sparse after hash feature engineering
-   - ❗ Drawback: The interpretability of the feature is lost, and there is no way to find the original feature from the hashed vector
+  - Feature Hashing
+    - Suppose we have 1 million emails as a training set, each email has only a few dozen words on average, but the vocabulary may be hundreds of thousands, the input data created in this way is a high-dimensional sparse matrix, which is not a friendly input for many machine learning algorithms. 
+    - Compared with one-hot encoding , there is no need to maintain a variable table in advance(the conversion of new features does not affect the length of the input feature (because it is defined in advance. hash range)
+    - Online learning is convenient, and the time and space complexity of model training is reduced
+    - Vectors that were originally very sparse may become less sparse after hash feature engineering
+    - ❗ Drawback: The interpretability of the feature is lost, and there is no way to find the original feature from the hashed vector
 
 
 - pyspark streaming 
