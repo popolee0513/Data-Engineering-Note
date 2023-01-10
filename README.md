@@ -178,7 +178,7 @@ together and then in second stage `Spark will put all records with the same keys
        - That is to say, a topic can have multiple partitions in the cluster, so what is the partition strategy? There are two basic strategies for which partition the message is sent to, one is to use the Key Hash algorithm, the other is to use the Round Robin algorithm
        - Each of the partitions could have replicas which are the same copy. This is helpful in avoiding single point of partition failure(`fault tolerance`). 
      - `Producer`: The message producer is the client that sends messages to the kafka broker.
-     - `Consume`r : message consumer, client that fetches messages from kafka broker
+     - `Consumer` : message consumer, client that fetches messages from kafka broker
      - A producer writes messages to the topic and a consumer reads them from the topic. This way we are decoupling them since the producer can write messages to the topic without waiting for the consumer. `The consumer can then consume messages at its own pace.` This is known as the **publish-subscribe pattern**
      - Retention of records
        - One thing that separates Kafka from other messaging systems is the fact that the records are not removed from the topic once they are consumed. This allows multiple consumers to consume the same record and it also allows the same consumer to read the records again (and again)
