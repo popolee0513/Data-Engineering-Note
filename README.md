@@ -176,6 +176,9 @@ together and then in second stage `Spark will put all records with the same keys
        - Each message in the partition is assigned an ordered id (offset). Kafka only guarantees that messages are sent to consumers in the order in a partition, and does not guarantee the order of a topic as a whole (between multiple partitions)
        - That is to say, a topic can have multiple partitions in the cluster, so what is the partition strategy? There are two basic strategies for which partition the message is sent to, one is to use the Key Hash algorithm, the other is to use the Round Robin algorithm
        - Each of the partitions could have replicas which are the same copy. This is helpful in avoiding single point of partition failure(`fault tolerance`). 
+     - **Replication**
+       - When a partition is replicated accross multiple brokers, one of the brokers becomes the leader for that specific partition. The leader handles the message and writes it to its partition log. The partition log is then replicated to other brokers, which contain replicas for that partition. Replica partitions should contain the same messages as leader partitions.
+       - If a broker which contains a leader partition dies, another broker becomes the leader and picks up where the dead broker left off, thus guaranteeing that both producers and consumers can keep posting and reading messages.
      - **Producer** : The message producer is the client that sends messages to the kafka broker.
      - **Consumer** : message consumer, client that fetches messages from kafka broker
      - A producer writes messages to the topic and a consumer reads them from the topic. This way we are decoupling them since the producer can write messages to the topic without waiting for the consumer. `The consumer can then consume messages at its own pace.` This is known as the **publish-subscribe pattern**
