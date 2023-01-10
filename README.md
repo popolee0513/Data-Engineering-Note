@@ -163,7 +163,6 @@ together and then in second stage `Spark will put all records with the same keys
 - Kafka
   - useful links
     - [basic concepts of kafka](https://medium.com/@jhansireddy007/basic-concepts-of-kafka-e49e7674585e)
-    - [kafka工作原理](https://xstarcd.github.io/wiki/Cloud/kafka_Working_Principles.html?fbclid=IwAR3QQsNggcAnU1o-NVXbfJsYowhYG1TtbpuXrBtbk8Agm2ancpnRONdpXjk)
     - [An Introduction to Kafka Topics and Partitions](https://codingharbour.com/apache-kafka/the-introduction-to-kafka-topics-and-partitions/?fbclid=IwAR02UXesxrQfZblcrtPnbZQnBD5cs58aor7D-GsrHBARF38t7CWFWnz3N60)
   - basic structure:
     - **Broker**
