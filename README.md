@@ -181,33 +181,34 @@ together and then in second stage `Spark will put all records with the same keys
        - When a partition is replicated accross multiple brokers, one of the brokers becomes the leader for that specific partition. The leader handles the message and writes it to its partition log. The partition log is then replicated to other brokers, which contain replicas for that partition. Replica partitions should contain the same messages as leader partitions.
        - If a broker which contains a leader partition dies, another broker becomes the leader and picks up where the dead broker left off, thus guaranteeing that both producers and consumers can keep posting and reading messages.
      - **Producer** : The message producer is the client that sends messages to the kafka broker.
-     
-    ```flow
-    p(producer)
-    k{{kafka broker}}
-    subgraph logs[logs for topic 'abc']
-        m1[message 1]
-        m2[message 2]
-        m3[message 3]
-    end
-    p-->|1. Declare topic 'abc'|k
-    p-->|2. Send messages 1,2,3|k
-    k -->|3. Write messages 1,2,3|logs
-    k-.->|4. ack|p
+     ```mermaid
+    flowchart LR
+        p(producer)
+        k{{kafka broker}}
+        subgraph logs[logs for topic 'abc']
+            m1[message 1]
+            m2[message 2]
+            m3[message 3]
+        end
+        p-->|1. Declare topic 'abc'|k
+        p-->|2. Send messages 1,2,3|k
+        k -->|3. Write messages 1,2,3|logs
+        k-.->|4. ack|p
     ```
      - **Consumer** : message consumer, client that fetches messages from kafka broker
-     ```flowchart LR
-    c(consumer)
-    k{{kafka broker}}
-    subgraph logs[logs for topic 'abc']
-        m1[message 1]
-        m2[message 2]
-        m3[message 3]
-    end
-    c-->|1. Subscribe to topic 'abc|k
-    k<-->|2. Check messages|logs
-    k-->|3. Send unread messages|c
-    c-.->|4. ack|k
+     ```mermaid
+    flowchart LR
+        c(consumer)
+        k{{kafka broker}}
+        subgraph logs[logs for topic 'abc']
+            m1[message 1]
+            m2[message 2]
+            m3[message 3]
+        end
+        c-->|1. Subscribe to topic 'abc|k
+        k<-->|2. Check messages|logs
+        k-->|3. Send unread messages|c
+        c-.->|4. ack|k
     ```
      - A producer writes messages to the topic and a consumer reads them from the topic. This way we are decoupling them since the producer can write messages to the topic without waiting for the consumer. `The consumer can then consume messages at its own pace.` This is known as the **publish-subscribe pattern**
      - Retention of records
