@@ -217,9 +217,9 @@ together and then in second stage `Spark will put all records with the same keys
        - One thing that separates Kafka from other messaging systems is the fact that the records are not removed from the topic once they are consumed. This allows multiple consumers to consume the same record and it also allows the same consumer to read the records again (and again)
        - Records are removed after a certain period of time. By default, Kafka will retain records in the topic for 7 days. Retention can be configured per topic
      - Note on Config
-       - When a producer does not receive an acknowledgement for some time (defined by the property `max.block.ms`), it resends the message (after time defined by the property `retry.backoff.ms`). It keeps resending the failed messages for number of times defined by the property `retries`. 
+       - When a producer does not receive an acknowledgement for some time (defined by the property `max.block.ms`), it resends the message (after time defined by the property `retry.backoff.ms`). It keeps resending the failed messages for number of times defined by the property `retries`.
+       - `batch.size`, `linger.ms`當這兩個參數同時設置的時候，只要兩個條件中滿足一個就會發送。比如說batch.size設置16kb，linger.ms設置50ms，那麼當消息積壓達到16kb就會發送，如果沒有到達16kb，那麼在第一個消息到來之後的50ms之後消息將會發送。 
      
-        
 - Linux v.s. Shell Scripting basic
   - note
     - [wget -O for non-existing save path?](https://stackoverflow.com/questions/11258271/wget-o-for-non-existing-save-path)
