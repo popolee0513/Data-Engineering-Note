@@ -182,7 +182,7 @@ together and then in second stage `Spark will put all records with the same keys
        - If a broker which contains a leader partition dies, another broker becomes the leader and picks up where the dead broker left off, thus guaranteeing that both producers and consumers can keep posting and reading messages.
      - **Producer** : The message producer is the client that sends messages to the kafka broker.
      
-     flowchart LR
+    ```flowchart LR
     p(producer)
     k{{kafka broker}}
     subgraph logs[logs for topic 'abc']
@@ -194,9 +194,9 @@ together and then in second stage `Spark will put all records with the same keys
     p-->|2. Send messages 1,2,3|k
     k -->|3. Write messages 1,2,3|logs
     k-.->|4. ack|p
-
+    ```
      - **Consumer** : message consumer, client that fetches messages from kafka broker
-     
+     ```
      flowchart LR
     c(consumer)
     k{{kafka broker}}
@@ -209,7 +209,7 @@ together and then in second stage `Spark will put all records with the same keys
     k<-->|2. Check messages|logs
     k-->|3. Send unread messages|c
     c-.->|4. ack|k
-
+    ```
      - A producer writes messages to the topic and a consumer reads them from the topic. This way we are decoupling them since the producer can write messages to the topic without waiting for the consumer. `The consumer can then consume messages at its own pace.` This is known as the **publish-subscribe pattern**
      - Retention of records
        - One thing that separates Kafka from other messaging systems is the fact that the records are not removed from the topic once they are consumed. This allows multiple consumers to consume the same record and it also allows the same consumer to read the records again (and again)
