@@ -162,6 +162,7 @@ together and then in second stage `Spark will put all records with the same keys
     - [Spark streaming output modes](https://medium.com/analytics-vidhya/spark-streaming-output-modes-600c689b6bf9)
 - Kafka
   - useful links
+    - [10 Configs to Make Your Kafka Producer More Resilient](https://towardsdatascience.com/10-configs-to-make-your-kafka-producer-more-resilient-ec6903c63e3f)
     - [basic concepts of kafka](https://medium.com/@jhansireddy007/basic-concepts-of-kafka-e49e7674585e)
     - [An Introduction to Kafka Topics and Partitions](https://codingharbour.com/apache-kafka/the-introduction-to-kafka-topics-and-partitions/?fbclid=IwAR02UXesxrQfZblcrtPnbZQnBD5cs58aor7D-GsrHBARF38t7CWFWnz3N60)
   - basic structure:
