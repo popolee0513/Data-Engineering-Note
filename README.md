@@ -187,7 +187,8 @@ together and then in second stage `Spark will put all records with the same keys
        - One thing that separates Kafka from other messaging systems is the fact that the records are not removed from the topic once they are consumed. This allows multiple consumers to consume the same record and it also allows the same consumer to read the records again (and again)
        - Records are removed after a certain period of time. By default, Kafka will retain records in the topic for 7 days. Retention can be configured per topic
      - Note on config
-       -      
+       - When a producer does not receive an acknowledgement for some time (defined by the property `max.block.ms`), it resends the message (after time defined by the property `retry.backoff.ms`). It keeps resending the failed messages for number of times defined by the property `retries`. 
+     
         
 - Linux v.s. Shell Scripting basic
   - note
