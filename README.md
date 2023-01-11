@@ -182,7 +182,7 @@ together and then in second stage `Spark will put all records with the same keys
        - If a broker which contains a leader partition dies, another broker becomes the leader and picks up where the dead broker left off, thus guaranteeing that both producers and consumers can keep posting and reading messages.
      - **Producer** : The message producer is the client that sends messages to the kafka broker.
      
-    ```flowchart LR
+    ```flow
     p(producer)
     k{{kafka broker}}
     subgraph logs[logs for topic 'abc']
@@ -196,8 +196,7 @@ together and then in second stage `Spark will put all records with the same keys
     k-.->|4. ack|p
     ```
      - **Consumer** : message consumer, client that fetches messages from kafka broker
-     ```
-     flowchart LR
+     ```flowchart LR
     c(consumer)
     k{{kafka broker}}
     subgraph logs[logs for topic 'abc']
