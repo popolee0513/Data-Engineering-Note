@@ -15,12 +15,20 @@
      - [Spark架構與原理這一篇就夠了](https://iter01.com/553814.html)
      - [Apache Spark Performance Boosting](https://towardsdatascience.com/apache-spark-performance-boosting-e072a3ec1179)
 - Bigquery: 可以提供大量的資料儲存，且以結構化查詢(SQL)方式查詢您儲存的資料，並且可以支援資料表之間的Join動作。
+  - Link
+    - [Save the result of a query in a BigQuery Table, in Cloud Storage](https://stackoverflow.com/questions/72103557/save-the-result-of-a-query-in-a-bigquery-table-in-cloud-storage)
   - Note
-    - BigQuery supports a few external data sources: you may query these sources directly from BigQuery even though the data itself isn't stored in BQ. An **external table** is a table that acts like a standard BQ table. The table metadata (such as the schema) is stored in BQ storage but the data itself is external.</br>
-      📑 common metadata: </br>
-      •	表格定義（有哪些欄位，如：sale_id）</br>
-      •	各個欄位的資料型態</br>
-      •	各個欄位實際在原始資料裡頭的排列順序</br>
+    - BigQuery supports a few external data sources: you may query these sources directly from BigQuery even though the data itself isn't stored in BQ. An **external table** is a table that acts like a standard BQ table. The table metadata (such as the schema) is stored in BQ storage but the data itself is external and **BQ will figure out the table schema and the datatypes based on the contents of the files.**(Be aware that BQ cannot determine processing costs of external tables.)
+      📑📑📑 Common metadata: </br>
+      •	table definition (what are the columns, eg: sale_id)</br>
+      •	The data type of each column</br>
+      •	The order in which each column actually appears in the original data</br>
+   - Tip
+     - Optimize your join patterns Best practice: For queries that join data from multiple tables, start with the largest table.
+     - Use external data sources appropiately. Constantly reading data from a bucket may incur in additional costs and has worse performance.
+     - **Use clustered and/or partitioned tables if possible.**
+     - Avoid select*
+
 
 - pyspark
   - overview
