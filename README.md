@@ -14,6 +14,10 @@
      - [Spark簡介](http://debussy.im.nuu.edu.tw/sjchen/BigData/Spark.pdf)
      - [Spark架構與原理這一篇就夠了](https://iter01.com/553814.html)
      - [Apache Spark Performance Boosting](https://towardsdatascience.com/apache-spark-performance-boosting-e072a3ec1179)
+- Bigquery: 可以提供大量的資料儲存，且以結構化查詢(SQL)方式查詢您儲存的資料，並且可以支援資料表之間的Join動作。
+  - Note
+    - BigQuery supports a few external data sources: you may query these sources directly from BigQuery even though the data itself isn't stored in BQ. An external table is a table that acts like a standard BQ table. The table metadata (such as the schema) is stored in BQ storage but the data itself is external.
+
 - pyspark
   - overview
     - Spark包含1個driver和若干個exexutor（在各個節點上）(master-slave architecture, the master is the driver, and slaves are the executors)
