@@ -27,7 +27,7 @@
      - Optimize your join patterns Best practice: For queries that join data from multiple tables, start with the largest table.
      - Use external data sources appropiately. Constantly reading data from a bucket may incur in additional costs and has worse performance.
      - **Use clustered and/or partitioned tables if possible.**
-     - Avoid select*
+     - Avoid select* (BigQuery engine utilizes BigQuery’s columnar storage format to scan only the required columns to run the query. One of the best practices to control costs is to query only the columns that you need.)
 
 
 - pyspark
