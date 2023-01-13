@@ -261,5 +261,7 @@ One way we can solve this problem is by deciding to have one table that keeps tr
      
  - Cassandra
    - [Crash Course | Introduction to Cassandra for Developers](https://www.youtube.com/watch?v=jgqu1BcSKUI&ab_channel=DataStaxDevelopers)
+ - GCP setup
+   - GCP Service Account: the purpose of the Service Account is to `provide the permissions required for the application to execute on GCP`.
           
  
