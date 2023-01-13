@@ -14,7 +14,7 @@
      - [Spark簡介](http://debussy.im.nuu.edu.tw/sjchen/BigData/Spark.pdf)
      - [Spark架構與原理這一篇就夠了](https://iter01.com/553814.html)
      - [Apache Spark Performance Boosting](https://towardsdatascience.com/apache-spark-performance-boosting-e072a3ec1179)
-- Bigquery: 可以提供大量的資料儲存，且以結構化查詢(SQL)方式查詢您儲存的資料，並且可以支援資料表之間的Join動作。
+- Bigquery: can provide a large amount of data storage, and query your stored data in the form of structured query (SQL), and can support the Join action between data tables.
   - Link
     - [Save the result of a query in a BigQuery Table, in Cloud Storage](https://stackoverflow.com/questions/72103557/save-the-result-of-a-query-in-a-bigquery-table-in-cloud-storage)
   - Note
