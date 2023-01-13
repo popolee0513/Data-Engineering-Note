@@ -259,7 +259,7 @@ One way we can solve this problem is by deciding to have one table that keeps tr
    - SQL
      - [6 Key Concepts, to Master Window Functions](https://www.startdataengineering.com/post/6-concepts-to-clearly-understand-window-functions/)
      
-   - Cassandra
-     - [Crash Course | Introduction to Cassandra for Developers](https://www.youtube.com/watch?v=jgqu1BcSKUI&ab_channel=DataStaxDevelopers)
+ - Cassandra
+   - [Crash Course | Introduction to Cassandra for Developers](https://www.youtube.com/watch?v=jgqu1BcSKUI&ab_channel=DataStaxDevelopers)
           
  
