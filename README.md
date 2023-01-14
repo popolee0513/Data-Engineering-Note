@@ -11,12 +11,12 @@
      - [一段 Airflow 與資料工程的故事：談如何用 Python 追漫畫連載](https://leemeng.tw/a-story-about-airflow-and-data-engineering-using-how-to-use-python-to-catch-up-with-latest-comics-as-an-example.html)
   - Pyspark
      - [Spark Install Instructions - Windows](https://mas-dse.github.io/DSE230/installation/windows/)
-     - [《巨量資料技術與應用-Spark (Python篇)》實務操作講義- RDD運作基礎](http://debussy.im.nuu.edu.tw/sjchen/BigData-Spark/%E5%B7%A8%E9%87%8F%E8%B3%87%E6%96%99%E6%8A%80%E8%A1%93%E8%88%87%E6%87%89%E7%94%A8%E6%93%8D%E4%BD%9C%E8%AC%9B%E7%BE%A9-RDD%E9%81%8B%E4%BD%9C%E5%9F%BA%E7%A4%8E.html)
+     - [巨量資料技術與應用-Spark (Python篇) 實務操作講義- RDD運作基礎](http://debussy.im.nuu.edu.tw/sjchen/BigData-Spark/%E5%B7%A8%E9%87%8F%E8%B3%87%E6%96%99%E6%8A%80%E8%A1%93%E8%88%87%E6%87%89%E7%94%A8%E6%93%8D%E4%BD%9C%E8%AC%9B%E7%BE%A9-RDD%E9%81%8B%E4%BD%9C%E5%9F%BA%E7%A4%8E.html)
      - [PySpark Tutorial](https://sparkbyexamples.com/)
      - [Pyspark API reference](https://spark.apache.org/docs/latest/api/python/reference/index.html)
      - [Spark簡介](http://debussy.im.nuu.edu.tw/sjchen/BigData/Spark.pdf)
      - [Spark架構與原理這一篇就夠了](https://iter01.com/553814.html)
-     - [Apache Spark Performance Boosting](https://towardsdatascience.com/apache-spark-performance-boosting-e072a3ec1179)
+     - **[Apache Spark Performance Boosting]**(https://towardsdatascience.com/apache-spark-performance-boosting-e072a3ec1179)
 - Bigquery: can provide a large amount of data storage, and query your stored data in the form of structured query (SQL), and can support the Join action between data tables.
   - Link
     - [Save the result of a query in a BigQuery Table, in Cloud Storage](https://stackoverflow.com/questions/72103557/save-the-result-of-a-query-in-a-bigquery-table-in-cloud-storage)
