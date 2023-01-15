@@ -23,6 +23,12 @@
             allow_large_results=  True,
             dag= dag  )
          ```
+       - get the metadata of the tables or check if the table exists or not
+       
+         ```sql
+         -- Returns metadata for tables in a single dataset.
+         SELECT * FROM myDataset.INFORMATION_SCHEMA.TABLES;
+         ```
   - Pyspark
      - [Spark Install Instructions - Windows](https://mas-dse.github.io/DSE230/installation/windows/)
      - [巨量資料技術與應用-Spark (Python篇) 實務操作講義- RDD運作基礎](http://debussy.im.nuu.edu.tw/sjchen/BigData-Spark/%E5%B7%A8%E9%87%8F%E8%B3%87%E6%96%99%E6%8A%80%E8%A1%93%E8%88%87%E6%87%89%E7%94%A8%E6%93%8D%E4%BD%9C%E8%AC%9B%E7%BE%A9-RDD%E9%81%8B%E4%BD%9C%E5%9F%BA%E7%A4%8E.html)
