@@ -9,6 +9,21 @@
   - Airflow
      - [How to aggregate data for BigQuery using Apache Airflow](https://cloud.google.com/blog/products/bigquery/how-to-aggregate-data-for-bigquery-using-apache-airflow)
      - [一段 Airflow 與資料工程的故事：談如何用 Python 追漫畫連載](https://leemeng.tw/a-story-about-airflow-and-data-engineering-using-how-to-use-python-to-catch-up-with-latest-comics-as-an-example.html)
+     - Note:
+       - Airflow BigQueryOperator: how to save query result in a partitioned Table?
+         
+         ```sql
+         bq_cmd = BigQueryOperator (
+            task_id=                    "task_id",
+            sql=                        [query],
+            destination_dataset_table=  destination_tbl,
+            use_legacy_sql=             False,
+            write_disposition=          'WRITE_TRUNCATE',
+            time_partitioning=          {'time_partitioning_type':'DAY'},
+            allow_large_results=        True,
+            dag=                        dag
+        )
+         ```
   - Pyspark
      - [Spark Install Instructions - Windows](https://mas-dse.github.io/DSE230/installation/windows/)
      - [巨量資料技術與應用-Spark (Python篇) 實務操作講義- RDD運作基礎](http://debussy.im.nuu.edu.tw/sjchen/BigData-Spark/%E5%B7%A8%E9%87%8F%E8%B3%87%E6%96%99%E6%8A%80%E8%A1%93%E8%88%87%E6%87%89%E7%94%A8%E6%93%8D%E4%BD%9C%E8%AC%9B%E7%BE%A9-RDD%E9%81%8B%E4%BD%9C%E5%9F%BA%E7%A4%8E.html)
