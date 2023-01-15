@@ -56,8 +56,8 @@
 
 - pyspark
   - overview
-    - Spark包含1個driver和若干個exexutor（在各個節點上）(master-slave architecture, the master is the driver, and slaves are the executors)
-    - Spark clusters(often contain multiple computers that behave as executors) are managed by a `master`. A driver that wants to execute a Spark job will send the job to the master, which in turn will divide the work among the cluster's executors. If any executor fails and becomes offline for any reason, the master will reassign the task to another executor.
+    - Spark includes driver and multiple workers（on different node）(master-slave architecture, the master is the driver, and slaves are the executors)
+    - Spark clusters(often contain multiple computers) are managed by a `master`. A driver that wants to execute a Spark job will send the job to the master, which in turn will divide the work among the cluster's workers. If any worker fails and becomes offline for any reason, the master will reassign the task to another worker.
     
      <img src="https://github.com/popolee0513/Data-engineering-Note/blob/main/PIC/spark_structure.png" width="500" height="300"/>
   
