@@ -103,7 +103,7 @@
   - pyspark 用法筆記
      - 常見指令
      
-       <img src="https://github.com/popolee0513/Data-engineering-Note/blob/main/PIC/%E5%B8%B8%E8%A6%8Bspark%20%E6%8C%87%E4%BB%A4.png" width="800" height="550"/>
+       <img src="https://github.com/popolee0513/Data-engineering-Note/blob/main/PIC/%E5%B8%B8%E8%A6%8Bspark%20%E6%8C%87%E4%BB%A4.png" width="600" height="350"/>
      - group by key v.s. reduce by key
        - reduceByKey(fun):將具有相同key的key value pair之所有值做合併(Merge)計算
     
