@@ -21,8 +21,7 @@
             write_disposition=          'WRITE_TRUNCATE',
             time_partitioning=          {'time_partitioning_type':'DAY'},
             allow_large_results=        True,
-            dag=                        dag
-      )
+            dag=                        dag  )
          ```
   - Pyspark
      - [Spark Install Instructions - Windows](https://mas-dse.github.io/DSE230/installation/windows/)
