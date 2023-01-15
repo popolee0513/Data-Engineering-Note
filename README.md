@@ -69,6 +69,8 @@
        - tasks are created for every job stage and scheduled to the executors
      
      <img src="https://github.com/popolee0513/Data-engineering-Note/blob/main/PIC/Jobs%2C%20stages%2C%20tasks.png" width="600" height="300"/>
+   - Basic processing flow
+     - [27](http://debussy.im.nuu.edu.tw/sjchen/BigData/Spark.pdf)
    - Dependencies between RDDs
      - [38-42](http://debussy.im.nuu.edu.tw/sjchen/BigData/Spark.pdf)
    
