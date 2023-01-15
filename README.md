@@ -14,14 +14,14 @@
          
          ```sql
          bq_cmd = BigQueryOperator (
-            task_id=                    "task_id",
-            sql=                        [query],
+            task_id= "task_id",
+            sql= [query],
             destination_dataset_table=  destination_tbl,
-            use_legacy_sql=             False,
-            write_disposition=          'WRITE_TRUNCATE',
-            time_partitioning=          {'time_partitioning_type':'DAY'},
-            allow_large_results=        True,
-            dag=                        dag  )
+            use_legacy_sql= False,
+            write_disposition=  'WRITE_TRUNCATE',
+            time_partitioning=   {'time_partitioning_type':'DAY'},
+            allow_large_results=  True,
+            dag= dag  )
          ```
   - Pyspark
      - [Spark Install Instructions - Windows](https://mas-dse.github.io/DSE230/installation/windows/)
