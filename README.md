@@ -17,12 +17,12 @@
          bq_cmd = BigQueryOperator (
             task_id= "task_id",
             sql= [query],
-            destination_dataset_table=  destination_tbl,
+            destination_dataset_table= destination_tbl,
             use_legacy_sql= False,
-            write_disposition=  'WRITE_TRUNCATE',
-            time_partitioning=   {'time_partitioning_type':'DAY'},
-            allow_large_results=  True,
-            dag= dag  )
+            write_disposition= 'WRITE_TRUNCATE',
+            time_partitioning= {'time_partitioning_type':'DAY'},
+            allow_large_results= True,
+            dag= dag)
          ```
        - get the metadata of the tables or check if the table exists or not
        
