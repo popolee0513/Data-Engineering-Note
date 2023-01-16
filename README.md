@@ -259,7 +259,7 @@ together and then in second stage `Spark will put all records with the same keys
        - `batch.size`, `linger.ms` When these two parameters are set at the same time, as long as one of the two conditions is met, it will be sent. For example, if batch.size is set to 16kb and linger.ms is set to 50ms, then when the messages in the internal buffer reach 16kb, the messages will be sent. If size of total message <16kb, then the first message will be sent after 50ms of its arrival.
   - Schema Registry
     
-    <img src="https://github.com/popolee0513/Data-Engineering-Note/blob/main/PIC/Schema%20Registry.png" width="500" height="300"/>
+    <img src="https://github.com/popolee0513/Data-Engineering-Note/blob/main/PIC/Schema%20Registry.png" width="450" height="250"/>
      
 - Linux v.s. Shell Scripting basic
   - note
