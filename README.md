@@ -76,7 +76,7 @@
      - RDD 特性
        - immutable: 每個RDD都是不能被改變的，想要更新的？只能從既有中再建立另一個
        - 彈性(Resilient)：如果某節點機器故障，儲存於節點上的RDD損毀，能重新執行一連串的「轉換」指令，產生新的輸出資料
-       - 假設我們對RDD做了一系列轉換，例如： line ▶ badLines ▶ OtherRDD1 ▶ OtherRDD2 ▶ ...，因為每個RDD都是immutable，也就是說，只要紀錄了操作與建立行為(有點類似log)，badLines RDD就可以從line RDD取得，所以假設存放badLines RDD的節點損毀了(一或多台)，但只要儲存line RDD的節點還在的話，就能還原badLines了
+         - 假設我們對RDD做了一系列轉換，例如： line ▶ badLines ▶ OtherRDD1 ▶ OtherRDD2 ▶ ...，因為每個RDD都是immutable，也就是說，只要紀錄了操作與建立行為(有點類似log)，badLines RDD就可以從line RDD取得，所以假設存放badLines RDD的節點損毀了(一或多台)，但只要儲存line RDD的節點還在的話，就能還原badLines了
       
     - RDD操作
        - ✅ Transformation：操作一個或多個RDD，並產生出新的RDD
