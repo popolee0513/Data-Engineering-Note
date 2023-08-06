@@ -246,6 +246,7 @@ One way we can solve this problem is by deciding to have one table that keeps tr
    - [Crash Course | Introduction to Cassandra for Developers](https://www.youtube.com/watch?v=jgqu1BcSKUI&ab_channel=DataStaxDevelopers)
  - GCP
    - **GCP Service Account**: the purpose of the Service Account is to `provide the permissions required for the application to execute on GCP.`
- - difference between a data lake and a data warehouse?  data lake holds data of all structure types, including raw and unprocessed data, a data warehouse stores data that has been treated and transformed with a specific purpose in mind, which can then be used to source analytic or operational reporting. 
+ - Difference between a data lake and a data warehouse?
+   - Data lake holds data of all structure types, including raw and unprocessed data, a data warehouse stores data that has been treated and transformed with a specific purpose in mind, which can then be used to source analytic or operational reporting. 
           
  
