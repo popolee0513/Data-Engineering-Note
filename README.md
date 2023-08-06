@@ -93,40 +93,7 @@
        ❗❗❗ Not really. The line just **describes** what will happen `after you execute an action`, i.e. the RDD variable does **not** contain the expected txt file content.</br>
        (2) The driver node breaks up the work into tasks and each task contains information about the split of the data it will operate on. Now these Tasks are assigned to worker nodes.</br>
        (3) when collection **action** (i.e collect() in our case) is invoked, the results will be returned to the master from different nodes, and saved as a local variable c.
-  - pyspark 用法筆記
-     - 常見指令
-     
-       <img src="https://github.com/popolee0513/Data-engineering-Note/blob/main/PIC/%E5%B8%B8%E8%A6%8Bspark%20%E6%8C%87%E4%BB%A4.png" width="600" height="350"/>
-     - group by key v.s. reduce by key
-       - reduceByKey(fun):將具有相同key的key value pair之所有值做合併(Merge)計算
-    
-         <img src="https://github.com/popolee0513/Data-engineering-Note/blob/main/PIC/reduce_by_key.png" width="450" height="400"/>
-       - pyspark groupBy: In first stage, for each executor, inside each partition, it aggregates the data with same groupbykey 
-together and then in second stage `Spark will put all records with the same keys in the same partition`.
-       
-         <img src="https://github.com/popolee0513/Data-engineering-Note/blob/main/PIC/groupby_key.png" width="400" height="400"/>      
-     
-     - pyspark 的join
-     
-       ``` python
-       X.join(Y)
-       x=sc.parallelize([("a",1),("b",4)])	
-       y=sc.parallelize([("a",2),("a",3)])	
-       sorted(x.join(y).collect())	
-       Value:	[('a',(1,2)),	('a',(1,3))]
-       
-       X.leftOuterJoin(Y)
-       x=sc.parallelize([("a",1),("b",4)])	
-       y=sc.parallelize([("a",2)])	
-       sorted(x.leftOuterJoin(y).collect())	
-       Value:	[('a',(1,2)),('b',(4,None))]
-       
-       X.fullOuterJoin(Y)
-       x=sc.parallelize([("a",1),("b",4)])	
-       y=sc.parallelize([("a",2),("c",8)])	
-       sorted(x.fullOuterJoin(y).collect())	
-       Value:	[('a',(1,2)),('b',(4,None)),('c',(None,8))]
-       ``` 
+  
 - pyspark SQL
   - [The Most Complete Guide to pySpark DataFrames](https://towardsdatascience.com/the-most-complete-guide-to-pyspark-dataframes-2702c343b2e8)
   - [9 most useful functions for PySpark DataFrame](https://www.analyticsvidhya.com/blog/2021/05/9-most-useful-functions-for-pyspark-dataframe/?fbclid=IwAR00ptznUg4AYJW6lq2-PG3Egc_F21mw1c5zKLOdY6Igi6ZUtUqvemPIm6A)
