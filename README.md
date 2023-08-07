@@ -138,7 +138,7 @@
       - If you are joining a big dataframe multiple times throughout your pyspark application then save that table as bucketed tables and read them back in pyspark as dataframe. this way you can avoid multiple shuffles during join as data is already pre-shuffled
       - if you want to use bucket then spark.conf.get("spark.sql.sources.bucketing.enabled") should return True
       - With bucketing, we can shuffle the data in advance and save it in this pre-shuffled state(reduce shuffle during join operation)
-      - Bucket for optimized filtering is available in Spark 2.4+.If we use a filter on the field by which the table is bucketed,Spark will scan files only from the corresponding bucket and avoid a scan of the whole table
+      - Bucket for optimized filtering is available in Spark 2.4+. If we use a filter on the field by which the table is bucketed, Spark will scan files only from the corresponding bucket and avoid a scan of the whole table
       - check if the table bucketed: spark.sql("DESCRIBE EXTENDED table_name").show()
       - ❗❗❗ make sure that the columns for joining **have same datatype for two tables**
       - ❗❗❗ it is ideal to **have the same number of buckets** on both sides of the tables in the join; however, if tables with different bucket numbers: just use `spark.sql.bucketing.coalesceBucketsInJoin.enabled` to make to tabels have same number of buckets
