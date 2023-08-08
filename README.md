@@ -65,7 +65,7 @@
       Very Short Summary: Driver (submits) -> Master (manages) -> Worker/Executor (pull data and process it)
       
       In Spark Cluster, there are number of executors and each executor processes one file at a time. If we have one big file, then the file can be handled by only one 
-      executor and the rest of executors stay in idle state. However, if there are too many partitions, there will be excessive cost in managing lots of small tasks
+      executor and the rest of executors stay in idle state. However, if there are too many partitions, there will be excessive cost in managing lots of small tasks.
 
       Therefore, it is important to understand best practices for to distribute workload in different executors. This is possible by partitioning.
   
