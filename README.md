@@ -70,10 +70,10 @@
       Therefore, it is important to understand best practices for to distribute workload in different executors. This is possible by partitioning.
   
   - Jobs, stages, tasks
-     - An Application consists of a Driver and several Jobs, and a Job consists of multiple Stages
-     - When executing an Application, the Driver will apply for resources from the cluster manager, then start the Executor process that executes the Application, and send the application code and files to the Executor, and then the Executor will execute the Task
-     - After the operation is completed, the execution result will be returned to the Driver
-     - Action -> Job -> Job Stages -> Tasks
+      An Application consists of a Driver and several Jobs, and a Job consists of multiple Stages
+      When executing an Application, the Driver will apply for resources from the cluster manager, then start the Executor process that executes the Application, and send the application code and files to the Executor, and then the Executor will execute the Task
+      After the operation is completed, the execution result will be returned to the Driver
+      Action -> Job -> Job Stages -> Tasks
        - whenever you invoke an action, the SparkContext(Spark的入口，相當於應用程序的main函數) creates a job and runs the job scheduler to divide it into stages-->pipelineable
        - tasks are created for every job stage and scheduled to the executors
      
