@@ -70,6 +70,7 @@
       Therefore, it is important to understand best practices for to distribute workload in different executors. This is possible by partitioning.
   
   - Jobs, stages, tasks
+    
       An Application consists of a Driver and several Jobs, and a Job consists of multiple Stages
     
       When executing an Application, the Driver will apply for resources from the cluster manager, then start the Executor process that executes the Application, and send the application code and files to the Executor, and then the Executor will execute the Task
