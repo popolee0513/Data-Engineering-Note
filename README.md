@@ -143,7 +143,7 @@
     <img src="https://github.com/popolee0513/Data-engineering-Note/blob/main/PIC/partition_bucket.jpg" width="500" height="300"/>
  
     - `Partitioning`
-      - ❗❗❗ [Mastering PySpark Partitioning: repartition vs partitionBy](https://medium.com/@tomhcorbin/mastering-pyspark-partitioning-repartition-vs-partitionby-cfde90aa3622)
+      - [Mastering PySpark Partitioning: repartition vs partitionBy](https://medium.com/@tomhcorbin/mastering-pyspark-partitioning-repartition-vs-partitionby-cfde90aa3622)
       - `repartition()` is about how the data is distributed across partitions in memory during computation, while `partitionBy()` is about how the data is partitioned on disk when writing out to a file system.
      
     - `Bucketing`
