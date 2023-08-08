@@ -70,7 +70,9 @@
       Therefore, it is important to understand best practices for to distribute workload in different executors. This is possible by partitioning.
   
   - Jobs, stages, tasks
-    
+ 
+      <img src="https://github.com/popolee0513/Data-engineering-Note/blob/main/PIC/Jobs%2C%20stages%2C%20tasks.png" width="400" height="250"/>
+      
       An Application consists of a Driver and several Jobs, and a Job consists of multiple Stages
     
       When executing an Application, the Driver will apply for resources from the cluster manager, then start the Executor process that executes the Application, and send the application code and files to the Executor, and then the Executor will execute the Task
@@ -81,7 +83,7 @@
        - whenever you invoke an action, the SparkContext(Spark的入口，相當於應用程序的main函數) creates a job and runs the job scheduler to divide it into stages-->pipelineable
        - tasks are created for every job stage and scheduled to the executors
      
-       <img src="https://github.com/popolee0513/Data-engineering-Note/blob/main/PIC/Jobs%2C%20stages%2C%20tasks.png" width="400" height="250"/>
+       
    
    - what is RDD
       - In Spark, datasets are represented as a list of entries, where the list is broken up into many different partitions that are each stored on a different machine. Each partition holds a unique subset of the entries in the list. Spark calls datasets that it stores "Resilient Distributed Datasets" (RDDs).
