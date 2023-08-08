@@ -120,7 +120,7 @@
   - `Adding checkpoint(pyspark.sql.DataFrame.checkpoint)`
     - Returns a checkpointed version of this Dataset. Checkpointing can be used to truncate the logical plan of this DataFrame, which is especially useful in iterative algorithms where the plan may grow exponentially.(When the query plan starts to be huge, the performance decreases dramatically)
     - After checkpointing the data frame, you don't need to recalculate all of the previous transformations applied on the dataframe, it is stored on disk forever
-    - When I checkpoint dataframe and I reuse it - It autmoatically read the data from the dir that we wrote the files? yes, it should be read automatically
+    - When I checkpoint dataframe and I reuse it - It autmoatically reads the data from the dir that we wrote the files? yes, it should be read automatically
   - `Spark’s Skew Problem`
     - Sometimes it might happen that a lot of data goes to a single executor since the same key is assigned for a lot of rows in our data and this might even result in OOM error(when doing groupby or join transformation, same key must stay in same partition and some keys may be more frequent or common which leads to the `skew`), the skewd partition will take longer time to process and make overall job execution time more (all other tasks will be just waiting for it to be completed)
     - how to solve
