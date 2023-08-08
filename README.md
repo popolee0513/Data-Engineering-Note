@@ -65,7 +65,7 @@
       Very Short Summary: Driver (submits) -> Master (manages) -> Worker/Executor (pull data and process it)
       
       In Spark Cluster, there are number of executors and each executor processes one file at a time. If we have one big file, then the file can be handled by only one 
-      executor and the rest of executors stay in idle state.
+      executor and the rest of executors stay in idle state. However, if there are too many partitions, there will be excessive cost in managing lots of small tasks
 
       Therefore, it is important to understand best practices for to distribute workload in different executors. This is possible by partitioning.
   
@@ -144,10 +144,10 @@
  
     - [Best Practices for Bucketing in Spark SQL](https://medium.com/towards-data-science/best-practices-for-bucketing-in-spark-sql-ea9f23f7dd53)
       - [Mastering PySpark Partitioning: repartition vs partitionBy](https://medium.com/@tomhcorbin/mastering-pyspark-partitioning-repartition-vs-partitionby-cfde90aa3622)
-      - Partitioning is used to obtain performance while querying the data. Example: if we are dealing with a large **employee** table and often run queries with WHERE clauses that restrict the results to a particular country or department. If table is PARTITIONED BY country, DEPT then the partitioning structure will look like this</br>
+      - PartitionBy is used to obtain performance while querying the data. Example: if we are dealing with a large **employee** table and often run queries with WHERE clauses that restrict the results to a particular country or department. If table is PARTITIONED BY country, DEPT then the partitioning structure will look like this</br>
       .../employees/country=ABC/DEPT=XYZ</br>
       If query limits for employee from country=ABC, it will only scan the contents of one directory country=ABC. This can dramatically improve query performance
-      - `However, if there are too many partitions, there will be excessive cost in managing lots of small tasks(Too few partitions You will not utilize all of the cores available in the cluster)`
+     
     - `Bucketing(some notes)`
       - use Hash(x) mod n to assign each data to a bucket
       - If you are joining a big dataframe multiple times throughout your pyspark application then save that table as bucketed tables and read them back in pyspark as dataframe. this way you can avoid multiple shuffles during join as data is already pre-shuffled
