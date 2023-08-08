@@ -59,9 +59,8 @@
     
      <img src="https://github.com/popolee0513/Data-engineering-Note/blob/main/PIC/spark_structure.png" width="500" height="300"/>
   - Spark Cluster Topology
-     <img src="https://github.com/popolee0513/Data-Engineering-Note/blob/main/PIC/spark-cluster-topology.png" width="500" height="300"/>
-     - Very Short Summary: Driver (submits) -> Master (manages) -> Worker/Executor (pull data and process it)
-
+     <img src="https://github.com/popolee0513/Data-Engineering-Note/blob/main/PIC/spark-cluster-topology.png" width="250" height="200"/>
+      Very Short Summary: Driver (submits) -> Master (manages) -> Worker/Executor (pull data and process it)
       In Spark Cluster, there are number of executors and each executor process one file at a time. If we have one big file, then the file can be handled by only one 
       executor and the rest of executors stay in idle state.
 
