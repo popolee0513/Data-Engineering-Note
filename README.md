@@ -142,13 +142,11 @@
    
     <img src="https://github.com/popolee0513/Data-engineering-Note/blob/main/PIC/partition_bucket.jpg" width="500" height="300"/>
  
-    - [Best Practices for Bucketing in Spark SQL](https://medium.com/towards-data-science/best-practices-for-bucketing-in-spark-sql-ea9f23f7dd53)
+    - `Partitioning`
       - ❗❗❗ [Mastering PySpark Partitioning: repartition vs partitionBy](https://medium.com/@tomhcorbin/mastering-pyspark-partitioning-repartition-vs-partitionby-cfde90aa3622)
-      - PartitionBy is used to obtain performance while querying the data. Example: if we are dealing with a large **employee** table and often run queries with WHERE clauses that restrict the results to a particular country or department. If table is PARTITIONED BY country, DEPT then the partitioning structure will look like this</br>
-      .../employees/country=ABC/DEPT=XYZ</br>
-      If query limits for employee from country=ABC, it will only scan the contents of one directory country=ABC. This can dramatically improve query performance
+      - `repartition()` is about how the data is distributed across partitions in memory during computation, while `partitionBy()` is about how the data is partitioned on disk when writing out to a file system.
      
-    - `Bucketing(some notes)`
+    - `Bucketing`
       - Use Hash(x) mod n to assign each data to a bucket
       - If you are joining a big dataframe multiple times throughout your pyspark application then save that table as bucketed tables and read them back in pyspark as dataframe. This way you can avoid multiple shuffles during join as data is already pre-shuffled
       - If you want to use bucket then spark.conf.get("spark.sql.sources.bucketing.enabled") should return True
