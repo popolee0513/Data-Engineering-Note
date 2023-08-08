@@ -57,7 +57,7 @@
     - Spark includes driver and multiple workers（on different node）(master-slave architecture, the master is the driver, and slaves are the workers)
     - Spark clusters(often contain multiple computers) are managed by a `master`. A driver that wants to execute a Spark job will send the job to the master, which in turn will divide the work among the cluster's workers. If any worker fails and becomes offline for any reason, the master will reassign the task to another worker.
     
-     <img src="https://github.com/popolee0513/Data-engineering-Note/blob/main/PIC/spark_structure.png" width="500" height="300"/>
+     <img src="https://github.com/popolee0513/Data-engineering-Note/blob/main/PIC/spark_structure.png" width="450" height="250"/>
   - Spark Cluster Topology
   
      <img src="https://github.com/popolee0513/Data-Engineering-Note/blob/main/PIC/spark-cluster-topology.png" width="450" height="250"/>
