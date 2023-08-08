@@ -58,6 +58,14 @@
     - Spark clusters(often contain multiple computers) are managed by a `master`. A driver that wants to execute a Spark job will send the job to the master, which in turn will divide the work among the cluster's workers. If any worker fails and becomes offline for any reason, the master will reassign the task to another worker.
     
      <img src="https://github.com/popolee0513/Data-engineering-Note/blob/main/PIC/spark_structure.png" width="500" height="300"/>
+  - Spark Cluster Topology
+     <img src="https://github.com/popolee0513/Data-Engineering-Note/blob/main/PIC/spark-cluster-topology.png" width="500" height="300"/>
+     - Very Short Summary: Driver (submits) -> Master (manages) -> Worker/Executor (pull data and process it)
+
+      In Spark Cluster, there are number of executors and each executor process one file at a time. If we have one big file, then the file can be handled by only one 
+      executor and the rest of executors stay in idle state.
+
+Therefore, it is important to understand best practices for to distribute workload in different executors. This is possible by partitioning.
   
   - Jobs, stages, tasks
      - An Application consists of a Driver and several Jobs, and a Job consists of multiple Stages
@@ -67,7 +75,7 @@
        - whenever you invoke an action, the SparkContext(Spark的入口，相當於應用程序的main函數) creates a job and runs the job scheduler to divide it into stages-->pipelineable
        - tasks are created for every job stage and scheduled to the executors
      
-        <img src="https://github.com/popolee0513/Data-engineering-Note/blob/main/PIC/Jobs%2C%20stages%2C%20tasks.png" width="500" height="300"/>
+        <img src="https://github.com/popolee0513/Data-engineering-Note/blob/main/PIC/Jobs%2C%20stages%2C%20tasks.png" width="350" height="250"/>
    
    - what is RDD
       - In Spark, datasets are represented as a list of entries, where the list is broken up into many different partitions that are each stored on a different machine. Each partition holds a unique subset of the entries in the list. Spark calls datasets that it stores "Resilient Distributed Datasets" (RDDs).
