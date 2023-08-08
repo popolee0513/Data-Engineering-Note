@@ -62,12 +62,12 @@
   
      <img src="https://github.com/popolee0513/Data-Engineering-Note/blob/main/PIC/spark-cluster-topology.png" width="450" height="250"/>
       
-      Very Short Summary: Driver (submits) -> Master (manages) -> Worker/Executor (pull data and process it
+      Very Short Summary: Driver (submits) -> Master (manages) -> Worker/Executor (pull data and process it)
       
       In Spark Cluster, there are number of executors and each executor process one file at a time. If we have one big file, then the file can be handled by only one 
       executor and the rest of executors stay in idle state.
 
-Therefore, it is important to understand best practices for to distribute workload in different executors. This is possible by partitioning.
+      Therefore, it is important to understand best practices for to distribute workload in different executors. This is possible by partitioning.
   
   - Jobs, stages, tasks
      - An Application consists of a Driver and several Jobs, and a Job consists of multiple Stages
