@@ -71,7 +71,7 @@
   
   - Jobs, stages, tasks
  
-      <img src="https://github.com/popolee0513/Data-engineering-Note/blob/main/PIC/Jobs%2C%20stages%2C%20tasks.png" width="400" height="250"/>
+      <img src="https://github.com/popolee0513/Data-engineering-Note/blob/main/PIC/Jobs%2C%20stages%2C%20tasks.png" width="450" height="250"/>
       
       An Application consists of a Driver and several Jobs, and a Job consists of multiple Stages
     
