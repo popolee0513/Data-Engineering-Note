@@ -9,6 +9,7 @@
   - Airflow
      - [How to aggregate data for BigQuery using Apache Airflow](https://cloud.google.com/blog/products/bigquery/how-to-aggregate-data-for-bigquery-using-apache-airflow)
      - [一段 Airflow 與資料工程的故事：談如何用 Python 追漫畫連載](https://leemeng.tw/a-story-about-airflow-and-data-engineering-using-how-to-use-python-to-catch-up-with-latest-comics-as-an-example.html)
+     - [AIRFLOW START_DATE AND EXECUTION_DATE EXPLAINED](https://infinitelambda.com/airflow-start-date-execution-date/)
      - [Data lake with Pyspark through Dataproc GCP using Airflow](https://ilhamaulanap.medium.com/data-lake-with-pyspark-through-dataproc-gcp-using-airflow-d3d6517f8168)
      - Note:
        - Airflow BigQueryOperator: how to save query result in a partitioned Table?
@@ -24,7 +25,7 @@
             allow_large_results= True,
             dag= dag)
          ```
-       - get the metadata of the tables or check if the table exists or not
+       - Get the metadata of the tables or check if the table exists or not
        
          ```sql
          -- Returns metadata for tables in a single dataset.
