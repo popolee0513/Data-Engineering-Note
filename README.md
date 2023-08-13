@@ -228,8 +228,6 @@
     - $0 : is the name of the shell or shell script
     - $1, $2, $3, ... are the positional parameters
  - RDBMS
-   - [Database Transaction & ACID](https://oldmo860617.medium.com/database-transaction-acid-156a3b75845e)
-   - [[極短篇] 資料庫的 ACID 是什麼？](https://lance.coderbridge.io/2021/04/24/short-what-is-acid/)
    - `Normalization example(From CS50 web course)`</br>
      So far, we’ve only been working with one table at a time, but many databases in practice are populated by a number of tables that all relate to each other in some way. In our flights example, let’s imagine we also want to add an airport code to go with the city. The way our table is currently set up, we would have to add two more columns to go with each row. We would also be repeating information, as we would have to write in multiple places that city X is associated with code Y.</br></br><img src="https://github.com/popolee0513/Data-Engineering-Note/blob/main/PIC/like.png" width="500" height="300"/></br></br>
 One way we can solve this problem is by deciding to have one table that keeps track of flights, and then another table keeping track of airports. The second table might look something like this</br></br><img src="https://github.com/popolee0513/Data-Engineering-Note/blob/main/PIC/airports.png" width="500" height="300"/><br>
