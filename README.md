@@ -10,6 +10,7 @@
      - [How to aggregate data for BigQuery using Apache Airflow](https://cloud.google.com/blog/products/bigquery/how-to-aggregate-data-for-bigquery-using-apache-airflow)
      - [一段 Airflow 與資料工程的故事：談如何用 Python 追漫畫連載](https://leemeng.tw/a-story-about-airflow-and-data-engineering-using-how-to-use-python-to-catch-up-with-latest-comics-as-an-example.html)
      - [AIRFLOW START_DATE AND EXECUTION_DATE EXPLAINED](https://infinitelambda.com/airflow-start-date-execution-date/)
+     - [Airflow TaskGroups](https://stackoverflow.com/questions/68366469/airflow-tasks-in-specific-batches?fbclid=IwAR2arfif6MAajTeutvHDkWiCxmGIIgX4lbORcKuzMbc0GI3_QPzUr67owWY)
      - [Data lake with Pyspark through Dataproc GCP using Airflow](https://ilhamaulanap.medium.com/data-lake-with-pyspark-through-dataproc-gcp-using-airflow-d3d6517f8168)
    
   - Pyspark
