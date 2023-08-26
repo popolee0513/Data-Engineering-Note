@@ -20,8 +20,6 @@
      - [Spark簡介](http://debussy.im.nuu.edu.tw/sjchen/BigData/Spark.pdf)
      - **⭐⭐⭐[Apache Spark Performance Boosting](https://towardsdatascience.com/apache-spark-performance-boosting-e072a3ec1179)**
 - Bigquery: can provide a large amount of data storage, and query your stored data in the form of structured query (SQL), and can support the Join action between data tables.
-  - Link
-    - [Save the result of a query in a BigQuery Table, in Cloud Storage](https://stackoverflow.com/questions/72103557/save-the-result-of-a-query-in-a-bigquery-table-in-cloud-storage)
   - Note
     - BigQuery supports a few external data sources: you may query these sources directly from BigQuery even though the data itself isn't stored in BQ. An **external table** is a table that acts like a standard BQ table. The table metadata (such as the schema) is stored in BQ storage but the data itself is external and **BQ will figure out the table schema and the datatypes based on the contents of the files.**(Be aware that BQ cannot determine processing costs of external tables.)</br>
       📑 Common metadata : </br>
